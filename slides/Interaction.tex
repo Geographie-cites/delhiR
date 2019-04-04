@@ -13,19 +13,28 @@
 \vspace*{1.5cm}
 
 \LARGE
-\textbf{Interaction}
+\textbf{Interactions}
 
-\vspace*{2.5cm}
+\vspace*{1.5cm}
+ DELHI GIS-R School
+
 
 \large
+9-12\up{th} April 2019
 
-\textbf{Hadrien Commenges}
+\vspace*{1.5cm}
+
+
+\textbf{Hadrien Commenges \& Paul Chapron}
 
 {\small
 
 \vspace*{0.1cm}
 
-\url{hadrien.commenges@univ-paris1.fr}}
+\url{hadrien.commenges@univ-paris1.fr}
+
+\url{paul.chapron@ign.fr}
+}
 
 \end{center}
 
@@ -34,44 +43,46 @@
 
 
 % FRAME
-\begin{frame}{Cas d'application}
+\begin{frame}{Use case}
 
 \begin{block}{Interaction}
-Mise en relation d'objets géographiques entre eux. Interaction implique que la mise en relation se traduit par une action, uni-, bi- ou multi-directionnelle. Si les objets sont spatialisés, l'interaction a nécessairement une dimension spatiale.
+Relationship among objects.  An interaction may be unidirectional, bi-directional or multi-directional . 
+If the entities are spatial objects, interaction always integrate a spatial dimension.
 \end{block}
 
 ~
 
-La mise en relation peut prendre différentes formes:
+Relationships come in many forms
 
 \begin{itemize}
-\item domaine du vivant: oiseaux migrateurs, réfugiés climatiques, navettes domicile-travail, etc.
-\item domaine matériel: échange de marchandises entre pays, échanges sédimentaires dans un cours d'eau, etc.
-\item domaine immatériel: jumelage entre communes, amitié Facebook
+\item Environment: migratory birds, climate refugees, home-to-work commutes, etc.
+\item «Material realm»: commercial exchanges, percolation,   
+\item «Immaterial realm» : twin-towns, Facebook friendship, co-authorship, etc.
 \end{itemize}
 
 
 ~
 
-\textbf{Quel type d'information géographique est concerné?}
+\textbf{What kind of geographical information is concerned ?}
 
-$\rightarrow$ \textit{TYPE 1 - Objets spatialisés}
+
+
+$\rightarrow$ \textit{TYPE 1 - Geographical Objects}
 
 $\rightarrow$ \textit{TYPE 2 - Occurrences}
+
+
 
 \end{frame}
 
 
 
 % FRAME
-\begin{frame}{Formalisation}
+\begin{frame}{Relations Modeling}
 
-Tout système d'interaction est représentable par une mise en relation d'entités qui prend la forme d'une \textbf{liste de liens} ou d'une \textbf{matrice d'interaction}.
+Interacting systems can be represented  by the \textbf{relations} between constitutive \textbf{entities} , either as an \textbf{(adjacency) matrix} or as a \textbf{list of links}, weighted or not. (cf Graphs)
 
-~
-
-La mise en relation peut-être assortie d'un poids (fréquence, volume, etc.)
-
+%TODO figure EN 
 \begin{figure}
   \includegraphics[width=9cm]{MatriceOD.pdf}
 \end{figure}
@@ -81,56 +92,53 @@ La mise en relation peut-être assortie d'un poids (fréquence, volume, etc.)
 
 
 % FRAME
-\begin{frame}{Distance et interaction}
+\begin{frame}{Distance and Interaction}
 
-Lorsque l'interaction est spatialisée, elle implique nécessairement une \textbf{distance}.
+Spatial interactions imply \textbf{distance}.
 
 ~
 
 \begin{itemize}
-  \item L'interaction spatiale considère \textbf{le déplacement comme un effort}.
-  \item L'interaction spatiale est le rapport dialogique entre \textbf{mise en contact} et \textbf{friction de l'éloignement}.
-  \item L'interaction spatiale être abordée de deux façons: \textbf{relations entre lieux}  ou \textbf{attraction/influence d'un lieu sur les autres lieux}. 
-  \item Dans le premier cas on parlera d'\textbf{analyse de flux}
-  \item Dans le second cas on parlera d'\textbf{analyse de position} \\ (\texttt{cf. Accessibilité})
+  \item Spatial interaction considers \textbf{ travel as an effort }.
+  \item Spatial interaction confront \textbf{connecting entities} and the \textbf{distance induced decay}.
+  \item Spatial interaction comes in two flavors : \textbf{relationships between locations}  or \textbf{attraction/influence of a location on the others}. 
+  \begin{itemize}
+  \item The first relies on \textbf{flow analysis}
+  \item The second relies on \textbf{position analysis}(\textit{ Accessibility})
+  \end{itemize}
 \end{itemize}
 
 \end{frame}
 
 
 % FRAME
-\begin{frame}{Qu'est-ce qu'une distance?}
+\begin{frame}{What is distance ?}
 
 
-\textbf{En géographie}, le terme distance désigne une séparation qui demande un effort pour être franchie. La distance est une \textbf{friction}:
+\textbf{In Geography}, distance is a separation, requiring \textbf{effort} to be crossed. Distance is a \textbf{friction}, a barrier:
 
 \begin{itemize}
-  \item ``Everything is related to everything else, but near things are more related than distant things'' (Tobler)
+  \item \emph{«Everything is related to everything else, but near things are more related than distant things»} (Tobler)
 \end{itemize}
 
 ~ 
 
-\textbf{En mathématiques}, une distance satisfait les critères suivants:
+\textbf{In Maths}, a distance is a function satisfying the following conditions 
 
 \begin{itemize}
-  \item Symétrie: $d(a, b) = d(b,a)$
-  \item Séparation: $d(a, b) = 0 \Longleftrightarrow a = b$
-  \item Inégalité triangulaire: $d(a,c) \leq d(a,b) + d(b,c)$
+  \item Symmetry $d(a, b) = d(b,a)$
+  \item Identity of indicernibles : $d(a, b) = 0 \Longleftrightarrow a = b$
+  \item Triangle inequality: $d(a,c) \leq d(a,b) + d(b,c)$
 \end{itemize}
 
 \end{frame}
 
 
 % FRAME
-\begin{frame}{Distance euclidienne}
+\begin{frame}{Euclidean Distance }
 
-\textbf{Pour un vecteur de dimension 2 (coordonnées x et y):}
 
-\begin{figure}
-  \includegraphics[width=9cm]{DistancesEucli.pdf}
-\end{figure}
-
-\textbf{Pour vecteur de dimension $n$:}
+\textbf{For a n-dimensional vector:}
 
 \begin{equation}
   \nonumber
@@ -141,15 +149,15 @@ Lorsque l'interaction est spatialisée, elle implique nécessairement une \textb
 
 
 % FRAME
-\begin{frame}{Distance de Manhattan}
+\begin{frame}{Manhattan Distance}
 
-\textbf{Pour un vecteur de dimension 2:}
+\textbf{2D vector : }
 
 \begin{figure}
   \includegraphics[width=8cm]{DistancesMan.pdf}
 \end{figure}
 
-\textbf{Pour vecteur de dimension $n$:}
+\textbf{For a n-dimensional vector:}
 
 \begin{equation}
   \nonumber
@@ -159,180 +167,14 @@ Lorsque l'interaction est spatialisée, elle implique nécessairement une \textb
 \end{frame}
 
 
-% FRAME
-\begin{frame}{Distance-réseau, distance-temps, coût généralisé}
-
-\begin{itemize}
-  \item \textbf{Distance-réseau:} distance calculée sur un réseau de transport. \\ \textbf{Ex.} Distance calculée sur un réseau en damier (Manhattan).
-  \item \textbf{Distance-temps:} éloignement mesuré en temps. Demande de faire un calcul sur le réseau sachant la distance-réseau et la vitesse de déplacement sur ce réseau.
-  \item \textbf{Coût généralisé:} quantité composite de temps, d'argent, de confort. Très utilisé en économie des transport.
-\end{itemize}
-
-~
-
-$\rightarrow$ les notions de \textbf{distance-réseau} et de \textbf{distance-temps} sont abusives, ces distances satisfont rarement l'\textbf{inégalité triangulaire}.
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}{Distance-réseau, distance-temps, coût généralisé}
-
-\begin{figure}
-  \includegraphics[width=9.8cm]{DistancesTemps.pdf}
-\end{figure}
-
-\end{frame}
 
 
 
 
 % FRAME
-\begin{frame}{Approches de l'interaction}
+\begin{frame}{Flow modeling}
 
-\textbf{Trois approches principales:}
-
-\begin{enumerate}
-  \item Analyse descriptives des flux observés
-  \item Modélisation statistiques des flux
-  \item Analyse de graphe, à visée descriptive ou modélisatrice
-\end{enumerate}
-
-\end{frame}
-
-
-
-
-% FRAME
-\begin{frame}{Analyse de flux: données}
-
-Deux façons de mettre en forme les données: \textbf{format long} (liste de liens) et \textbf{format large} (matrice d'interaction):
-
-~
-
-\begin{figure}
-  \includegraphics[width=9.5cm]{MatriceOD.pdf}
-\end{figure}
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}{Analyse de flux: données}
-
-\begin{figure}
-  \includegraphics[width=12.1cm]{LongLarge.pdf}
-\end{figure}
-
-\begin{block}{La taille compte!}
-  \textbf{Plus le maillage est fin, plus la matrice est vide.} \\ \textbf{Ex.:} Navettes domicile-travail, France métropolitaine au RP 2010 \\ \textbf{1,3 milliards} de couples possibles ($36000^2$) et \textbf{1 million} de couples observés: la matrice est \textbf{vide à 99,9\%}.
-\end{block}
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}{Analyse de flux: marges}
-
-\begin{itemize}
-  \item Les \textbf{sommes marginales} donnent le poids des unités spatiales dans leur rôle d'\textbf{émission} et d'\textbf{attraction}
-  \item Le calcul est différent selon le format long ou large des données
-\end{itemize}
-
-\begin{figure}
-  \includegraphics[width=9.5cm]{MatriceOD_marges.pdf}
-\end{figure}
-
-\end{frame}
-
-
-
-% FRAME
-\begin{frame}{Analyse de flux: soldes}
-
-Soldes bruts et relatifs, sur les unités spatiales et sur les flux:
-
-\begin{itemize}
-  \item \textbf{Somme (unité spatiales):} $E+A$ 
-  \item \textbf{Solde brut (unité spatiales):} $E-A$
-  \item \textbf{Solde relatif (unité spatiales):} $(E-A)/(E+A)$ 
-  \item \textbf{Somme (flux):} $F_{ij} + F_{ji}$
-  \item \textbf{Solde brut (flux):} $F_{ij} - F_{ji}$
-  \item \textbf{Solde relatif (flux):} $(F_{ij} - F_{ji}) / (F_{ij} + F_{ji})$
-\end{itemize}
-
-~
-
-Deux mesures spécifiques pour les navettes domicile-travail:
-
-\begin{itemize}
-  \item \textbf{Autocontention:} $F_{ii} / F_{i \cdot}$
-  \item \textbf{Autosuffisance:} $F_{ii} / F_{\cdot j}$
-\end{itemize}
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}{Analyse de flux: exploration}
-
-\textbf{Explorer une matrice de flux} consiste à explorer 
-
-\begin{enumerate}
-\item les flux
-\item les marges
-\item les soldes
-\end{enumerate}
-
-~ 
-
-avec \ldots
-
-~
-\begin{itemize}
-  \item \ldots des mesures de centralité et de dispersion
-  \item \ldots des graphiques (histogrammes, boîtes, nuages)
-  \item \ldots des cartes (flux et stocks)
-\end{itemize}
-
-\end{frame}
-
-
-
-% FRAME
-\begin{frame}{Modélisation des flux: approches}
-
-\textbf{Historiquement, deux grandes approches ont été proposées:}
-
-\begin{itemize}
-  \item \textbf{Gravitation:} racines au 19e siècle (Casey, Ravenstein), appliqué par Reilly (1931), informatisé dans les années 1950 (USA, transport). Massivement utilisé dans plusieurs domaines (transport, géographie, démographie, économie).
-  \item \textbf{Interposition:} proposé par Stouffer (1942) informatisé dans les années 1950 (USA, transport), informatisé dans les années 1950 (USA, transport). Assez peu utilisé jusqu'à ce jour, repris récemment sous le nom de \textbf{radiation}.
-\end{itemize}
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}{Modélisation des flux: approches}
-
-\textbf{La mise en place d'un modèle d'interaction spatiale passe par trois étapes de formalisation:}
-
-\begin{enumerate}
-  \item \textbf{Formalisation conceptuelle} des entités (individus, unités spatiales) et des relations (échanges d'individus, de biens, d'informations).
-  \item \textbf{Formalisation mathématique} qui définit la nature et l'intensité des interactions dans un jeu d'équations.
-  \item \textbf{Formalisation informatique} qui implémente les équations dans un langage de programmation.
-\end{enumerate}
-
-
-
-\end{frame}
-
-
-
-% FRAME
-\begin{frame}{Modélisation des flux: formalisation}
-
-\textbf{Le modèle gravitaire d'origine s'écrit:}
+\textbf{Original gravity model:}
 
 \begin{equation}
 \nonumber
@@ -340,15 +182,25 @@ T_{ij} = k \frac{P_i P_j}{D_{ij}^{2}}
 \end{equation}
 
 ~
+With $T_{ij}$, the flow from location $i$ to $j$.
 
-De nombreuses versions existent qui n'ont plus grand' chose à voir avec la loi de gravité newtonienne. On jour principalement sur:
+$k$ a constant
+
+$P_i$ the mass of location $i$
+
+$D_{ij}$ the distance between location $i$ and $j$.
+
+
+~
+
+Many variations exist according to the choice of the terms:
 
 \begin{itemize}
-  \item \textbf{Nature des masses:} populations, emplois, émissions, attractions
-  \item \textbf{Pondération des masses:} paramètres multiplicateurs ou exposants
-  \item \textbf{Fonction de friction:} puissance négative, exponentielle  négative
-  \item \textbf{Contraintes aux marges:} contrainte double, simple, absente
-  \item \textbf{Résolution numérique} du système
+  \item \textbf{Masses:} populations, jobs , emissions, attractions
+  \item \textbf{Masses weights:} multiplying factors or exponents
+  \item \textbf{Friction function (distance):} negative powers, negative exponent
+  \item \textbf{Margin Constraints:} double, simple, none
+  \item \textbf{Numeric Resolution } 
 \end{itemize}
 
 
@@ -377,9 +229,9 @@ T_{ij} = k_i O_i \left[\exp(-\alpha x_{j-1}) - \exp(-\alpha x_{j}) \right]
 
 
 % FRAME
-\begin{frame}{Analyse de graphe}
+\begin{frame}{Network Analysis}
 
-Leonhard Euler et \textbf{les sept ponts de Koenigsberg} (Kaliningrad).
+Leonhard Euler and the \textbf{Seven Bridges of Königsberg} (Kaliningrad).
 
 
 \begin{figure}
@@ -390,7 +242,7 @@ Leonhard Euler et \textbf{les sept ponts de Koenigsberg} (Kaliningrad).
 
 
 % FRAME
-\begin{frame}{Analyse de graphe}
+\begin{frame}{Network analysis}
 
 \begin{figure}
   \includegraphics[width=5cm]{Konigsberg_graph.png}
@@ -399,7 +251,7 @@ Leonhard Euler et \textbf{les sept ponts de Koenigsberg} (Kaliningrad).
 ~
 
 \begin{itemize}
-\item Pas de \textbf{cycle eulérien} (parité des liens incidents)
+\item No \textbf{cycle eulérien} (parité des liens incidents)
 \item Pas de \textbf{chaîne eulérienne} (continuité du tracé)
 \end{itemize}
 
@@ -409,24 +261,18 @@ Leonhard Euler et \textbf{les sept ponts de Koenigsberg} (Kaliningrad).
 
 
 % FRAME
-\begin{frame}{Réseau social}
+\begin{frame}{Graphs}
 
-\begin{figure}
-  \includegraphics[width=12cm]{Moreno.pdf}
-\end{figure}
-
-\end{frame}
+A graph is a set of \textit{vertices}) connected by \textbf{edges}.
 
 
-% FRAME
-\begin{frame}{Qu'est-ce qu'un graphe?}
 
-Les graphes sont des objets mathématiques composés de \textbf{sommets} (n{\oe}ds, \textit{vertices}) et de \textbf{liens} (arcs, \textit{edges}). Ils représentent des objets divers:
+Examples:
 
 \begin{itemize} 
-  \item \textbf{Réseaux de transport:} métro modélisé avec des stations (n{\oe}uds) et des lignes (arcs)
-  \item \textbf{Réseaux sociaux:} réseau \textit{facebook} avec des individus (n{\oe}uds) et liens d'amitié (arcs)
-  \item \textbf{Réseaux bibliométriques:} réseau de chercheurs (n{\oe}uds) et reliés par des liens de co-publication (arcs)
+  \item \textbf{Transportation networks  :} e.g. Subway: nodes are  stations,  edges are lines.
+  \item \textbf{Social networks:} individuals (nodes) , social interactions (edges)
+  \item \textbf{Scientific collaboration networks:} Co-autorship (edges) among researchers (nodes)
   \item \ldots
 \end{itemize}
 
@@ -434,34 +280,11 @@ Les graphes sont des objets mathématiques composés de \textbf{sommets} (n{\oe}
 
 
 
-% FRAME
-\begin{frame}{Types de graphes}
-
-\textbf{Graphe orienté et valué:}
-
-\begin{figure}
-  \includegraphics[width=12cm]{MatGraph1.pdf}
-\end{figure}
-
-\end{frame}
-
 
 % FRAME
-\begin{frame}{Types de graphes}
+\begin{frame}{Types of graphs}
 
-\textbf{Graphe orienté et non-valué:}
-
-\begin{figure}
-  \includegraphics[width=12cm]{MatGraph2.pdf}
-\end{figure}
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}{Types de graphes}
-
-\textbf{Graphe non-orienté et non-valué:}
+\textbf{Undirected graph:}
 
 \begin{figure}
   \includegraphics[width=12cm]{MatGraph3.pdf}
@@ -470,19 +293,59 @@ Les graphes sont des objets mathématiques composés de \textbf{sommets} (n{\oe}
 \end{frame}
 
 
+% FRAME
+\begin{frame}{Types of graphs}
+
+\textbf{Directed graph :}
+
+\textit{arcs} are employed instead of \textit{edges} who are "undirected".
+
+%TODO image EN
+\begin{figure}
+  \includegraphics[width=12cm]{MatGraph2.pdf}
+\end{figure}
+
+\end{frame}
+
+
 
 % FRAME
-\begin{frame}{Principales mesures descriptives}
+\begin{frame}{Types of graphs}
 
-\textbf{Mesures globales:}
+\textbf{Weighted directed graph:}
+
+%TODO image EN
+\begin{figure}
+  \includegraphics[width=12cm]{MatGraph1.pdf}
+\end{figure}
+
+Also :
+\begin{itemize}
+  \item Weighted undirected graphs
+  \item Multi-graph ()
+  \item Multi-partite graphs (several types of nodes )
+  \item Hypergraphs (links between more than 2 nodes)
+  \item \ldots
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+% FRAME
+\begin{frame}{Network analysis : measures}
+
+\textbf{Global measures:}
 
 \begin{itemize}
-\item nombre de noeuds
-\item nombre d’arcs
-\item nombre de composantes connexes
-\item rapport entre nombre d’arcs et nombre de noeuds (densité)
-\item diamètre du graphe: longueur du plus long des plus courts chemins
-\item rapport entre nombre d’arcs et nombre maximum d’arcs (connectivité)
+\item number of nodes
+\item number of edges
+\item connected components
+\item Density (ratio nodes)
+\item Diameter : length of the longest shortest paths 
+\item Connectivity : number of edges and possible number of edges
 \end{itemize}
 
 ~
