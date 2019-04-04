@@ -1,0 +1,607 @@
+---
+title: "DelhiR: Spatial Analysis with R"
+author: "Paul Chapron & Hadrien Commenges"
+date: "April 2019"
+output: 
+  html_document: 
+    highlight: kate
+    theme: simplex
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
+```
+
+
+
+## Outline
+
+### Methods
+
+1. **Point pattern analysis.** 
+- Describing and to mapping a point pattern: center of gravity, standard ellipse, density estimator (KDE)
+- Assessing the distribution of a point pattern: spatial random process (Poisson), variance to mean ratio
+- Data: location of the Airbnb homes in Paris. The dataset is taken from [Inside Airbnb](http://insideairbnb.com) (http://insideairbnb.com)
+
+2. **Spatial networks and routing**
+- Computing shortest paths in a small network
+- Extracting distances and times matrices in a spatial network with OSRM
+- Getting a set of routes in a spatial network with OSRM
+- Data: location of the Airbnb homes in Paris (origins), location of the Eiffel Tower, [OSM data](https://www.openstreetmap.org) (https://www.openstreetmap.org) encapsulated in the OSRM API
+
+3. **Statistical analysis with areal units**
+- Interpolating values with inverse distance weighting
+- Computing dissimilarity indexes
+- Compute spatial autocorrelation indexes
+- Building a linear regression model with spatial data
+- Building a spatial autoregressive model
+- Data: location of the Airbnb homes, income data in [IRIS statistical areal units](https://www.insee.fr/fr/statistiques) (https://www.insee.fr/fr/statistiques)
+
+
+### Approach
+
+Most of the analysis presented in the course materials could be done with already implemented ready-to-use functions:
+
+- point pattern analysis -> `spatstat` package
+- spatial concentration indexes -> `ineq` package 
+- spatial autocorrelation indexes, spatial regression and associated functions are implemented -> `spdep` package
+
+
+The Comprehensive R Archive Network (CRAN) propose a list of [task views](https://cran.r-project.org/web/views) to help the users find the relevant packages and functions. Here is the [task view for spatial analysis](https://cran.r-project.org/web/views/Spatial.html): https://cran.r-project.org/web/views/Spatial.html
+
+**In this tutorial we try to implement these methods as "manually" as possible.** The dedicated packages are often more efficient and offer more options, but the "manual" implementation is way more pedagogical.
+
+
+
+## Load packages and data
+
+Load needed packages: 
+
+- network (graph) analysis: `igraph`
+- spatial objects and viz: `sp`, `sf`, `leaflet`, `cartography`
+- spatial interpolation: `SpatialPosition`
+- Excel import: `readxl`
+- access to OSRM for routing: `osrm`
+- functions to reshape data: `reshape2`
+- Hadley Wickham's metapackage: `tidyverse`
+
+```{r loadpackages}
+library(igraph)
+library(sp)
+library(sf)
+library(cartography)
+library(spdep)
+library(SpatialPosition)
+library(osrm)
+library(leaflet)
+library(readxl)
+library(reshape2)
+library(tidyverse)
+```
+
+
+Load data: 
+
+- neighborhoods basemap (Iris) 
+- population data (professional status, income)
+- Airbnb homes and reviews
+
+```{r loaddata, cache=TRUE}
+# Areal units (IRIS) basemao except Vincennes & Boulogne
+sfIris <- st_read("DATA/ContourIris.shp", crs = 2154, stringsAsFactors = FALSE) %>% 
+  mutate(DEP = substr(INSEE_COM, 1, 2)) %>% 
+  filter(DEP == "75") %>% 
+  filter(!CODE_IRIS %in% c("751124577", "751124677", "751166177", "751166277", "751166377"))
+
+# Income data in Iris areal units
+rawIncome <- read_xls("DATA/BASE_TD_FILO_DEC_IRIS_2014.xls", sheet = 1, skip = 5) %>% 
+  mutate(DEP = substr(COM, 1, 2)) %>% 
+  filter(DEP == "75")
+
+# Airbnb homes
+rawAirbnb <- read_csv("DATA/listings_paris.csv") %>% 
+  select(id, name, latitude, longitude, is_location_exact, property_type, room_type, accommodates, square_feet, price) 
+
+# Airbnb reviews
+rawAirbnbReviews <- read_csv("DATA/reviews_paris.csv") %>% 
+  select(listing_id, date) %>% 
+  mutate(year = substr(date, 1, 4))
+```
+
+Create a spatial point object for Airbnb homes.
+
+```{r}
+sfAirbnb <- st_as_sf(rawAirbnb, 
+                     coords = c("longitude", "latitude"),
+                     agr = "constant",
+                     crs = 4326,
+                     stringsAsFactors = FALSE)
+```
+
+
+
+## Point pattern analysis
+
+
+### Descriptive analysis
+
+Create point patterns at 4 dates (considering that a home exists **at time t** if it is reviewed).
+
+```{r}
+flatYear <- rawAirbnbReviews %>% 
+  dcast(data = ., formula = listing_id ~ year, fun.aggregate = length)
+
+id2012 <- flatYear %>% filter(`2012` > 0) %>% select(listing_id) %>% pull()
+id2014 <- flatYear %>% filter(`2014` > 0) %>% select(listing_id) %>% pull()
+id2016 <- flatYear %>% filter(`2016` > 0) %>% select(listing_id) %>% pull()
+id2018 <- flatYear %>% filter(`2018` > 0) %>% select(listing_id) %>% pull()
+
+pts2012 <- sfAirbnb %>% filter(id %in% id2012) %>% st_transform(crs = 2154)
+pts2014 <- sfAirbnb %>% filter(id %in% id2014) %>% st_transform(crs = 2154)
+pts2016 <- sfAirbnb %>% filter(id %in% id2016) %>% st_transform(crs = 2154)
+pts2018 <- sfAirbnb %>% filter(id %in% id2018) %>% st_transform(crs = 2154)
+```
+
+
+Implement functions to compute the gravity center from a point pattern.
+
+```{r}
+gravity_center <- function(pts, id){
+  matCoord <- st_coordinates(pts)
+  gCoords <- matrix(data = c(mean(matCoord[, 1]), mean(matCoord[, 2])), nrow = 1, ncol = 2)
+  gGeom <- st_point(x = gCoords, dim = "XY")
+  gSpatial <- st_sf(id = id, 
+                    geometry = st_sfc(gGeom),
+                    crs = 2154) %>% 
+    st_transform(crs = 4326)
+  return(gSpatial)
+}
+```
+
+Implement functions to compute the standard ellipse from a point pattern.
+
+```{r}
+ellipse_standard <- function(pts){
+  matCoord <- st_coordinates(pts)
+  ellSta <- siar::standard.ellipse(x = matCoord[, 1], y = matCoord[, 2])
+  oneLineStr <- st_linestring(x = cbind(ellSta$xSEA, ellSta$ySEA), dim = "XY")
+  oneLine <- st_sf(ID = 1, 
+                   geometry = st_sfc(oneLineStr),
+                   crs = 2154) %>% 
+    st_transform(crs = 4326)
+  return(oneLine)
+}
+```
+
+Visuzalize the gravity centers and standard ellipses for point patterns (2012-2014-2016-2018).
+
+```{r}
+leaflet() %>% 
+  addProviderTiles(provider = "Stamen.TonerLite") %>% 
+  addCircles(data = gravity_center(pts = pts2012, id = "2012"), color = "#FCBBA1", opacity = 0.9) %>% 
+  addCircles(data = gravity_center(pts = pts2014, id = "2014"), color = "#FC9272", opacity = 0.9) %>% 
+  addCircles(data = gravity_center(pts = pts2016, id = "2016"), color = "#FB6A4A", opacity = 0.9) %>% 
+  addCircles(data = gravity_center(pts = pts2018, id = "2018"), color = "#99000D", opacity = 0.9) %>% 
+  addPolylines(data = ellipse_standard(pts2012), color = "#FCBBA1", opacity = 0.9) %>%
+  addPolylines(data = ellipse_standard(pts2014), color = "#FC9272", opacity = 0.9) %>% 
+  addPolylines(data = ellipse_standard(pts2016), color = "#FB6A4A", opacity = 0.9) %>% 
+  addPolylines(data = ellipse_standard(pts2018), color = "#99000D", opacity = 0.9) 
+```
+
+
+Estimate the points density with KDE estimator. The `ggplot2` function `stat_density2d()` calls the lower level `MASS` function `kde2d()`. See help for details (bandwidth parameter).
+
+```{r}
+ggplot() +
+  geom_sf(data = sfIris, color = "grey50", fill = "grey40") +
+  stat_density2d(data = st_coordinates(pts2012) %>% as_tibble(), 
+                 aes(x = X, y = Y, fill = ..level..), 
+                 geom = "polygon", alpha = 0.5) +
+  geom_sf(data = pts2012, color = "firebrick", alpha = 0.7, size = 0.6) +
+  scale_fill_gradient(low = "#FCBBA1", high = "#67000D") +
+  theme_minimal()
+```
+
+### Point pattern distribution assessment
+
+It is a common question to assess if a point pattern could have been generated by a random process. The idea is to compare the observed spatial distribution with the distribution produced by a random spatial process (spatial Poisson process, homogeneous Poisson process). Two main methods are used: the Variance-to-Mean Ratio (VMR) and the quadrat analysis. Both methods share the same steps: 
+
+- making a regular grid
+- counting the observations in each cell
+- comparing this distribution to a Poisson distribution
+
+The main package to perform point pattern analysis is the `spatstat` package. Here we show a simple "manual" computation of the Variance-to-Mean Ratio that can be used as a test or as a desciptive measure. 
+
+Create the regular grid based on the point pattern bounding box.
+
+```{r}
+rectGrid <- st_make_grid(x = pts2012)
+plot(rectGrid)
+plot(pts2012$geometry, pch = 20, col = "firebrick", add = TRUE)
+```
+
+Compute the spatial intersection between the grid and the point pattern and count the number of points falling within each cell. Ideally we should distinguish between two kinds of empty cells: some cells are empty because the randomness; some cells are empty because the process cannot occur there (ex. Airbnb homes in the middle of the river). This second kind of cells should be deleted when defining an observation window.
+
+```{r}
+interGridPts <- st_intersects(x = rectGrid, y = pts2012)
+nbPts <- sapply(interGridPts, length)
+nbPtsNonEmpty <- nbPts[nbPts > 0]
+plot(rectGrid[nbPts > 0])
+plot(pts2012$geometry, pch = 20, col = "firebrick", add = T)
+```
+
+Compute the VMR.
+
+```{r}
+obsMean <- mean(nbPtsNonEmpty)
+obsVar <- var(nbPtsNonEmpty)
+VMR <- obsVar / obsMean
+print(paste("Variance :", round(obsVar, 2)))
+print(paste("Mean :", round(obsMean, 2)))
+print(paste("VMR :" , round(VMR, 2)))
+```
+
+To assess if the observed value is significant i.e. clearly different from 1, we can simulate a random point pattern with similar characteristics and compute the VMR, and reiterate. Then we get the distribution of values correspondong to the studied situation.
+
+```{r}
+rectGrid <- st_make_grid(x = pts2012)
+bboxParis <- st_bbox(rectGrid)
+set.seed(123)
+vecVMR <- vector()
+for(i in 1:200){
+  randX <- runif(n = nrow(pts2012), min = bboxParis[1], max = bboxParis[3])
+  randY <- runif(n = nrow(pts2012), min = bboxParis[2], max = bboxParis[4])
+  randPts <-  st_as_sf(x = tibble(LONG = randX, LAT = randY),
+                       coords = c("LONG", "LAT"), 
+                       agr = "constant", 
+                       crs = 2154)
+  interGridPtsRand <- st_intersects(x = rectGrid, y = randPts)
+  nbPtsRand <- sapply(interGridPtsRand, length)
+  tempVMR <- var(nbPtsRand) / mean(nbPtsRand)
+  vecVMR <- append(vecVMR, tempVMR)
+}
+
+hist(vecVMR, col = "grey50", border = "white",
+     main = "Distribution of simulated VMRs",
+     xlab = "VMR value", ylab = "Frequency (n = 500)")
+summary(vecVMR)
+
+```
+
+
+## Spatial networks and routing
+
+### Compute shortest paths within a network
+
+There are two main packages for network analysis within the R ecosystem: `igraph` (physics) and `statnet` (collection of packages for social network analysis). The main methods are implemented in both packages.
+
+We make an igraph object representing the Zachary's Karate Club (Zachary, 1977, "An information flow model for conflict and fission in small groups", *Journal of Anthropological Research*, Vol.33, No.4).
+
+```{r}
+karateClub <- make_graph("Zachary")
+
+plot(karateClub, 
+     vertex.size = 12, 
+     vertex.color = "grey",
+     vertex.frame.color = NA,
+     vertex.label.color = "black",
+     vertex.label.cex = 0.7, 
+     edge.color = "firebrick",
+     edge.width = 1)
+
+```
+
+Get the list of shortests paths: in a simple non-weighted undirected graph, a breadth-first search (BFS) algorithm is used (see help).
+
+```{r}
+listShortPaths <- shortest_paths(graph = karateClub, 
+                                 from = V(karateClub), 
+                                 to = V(karateClub),
+                                 mode = "all")
+```
+
+
+Get the corresponding matrix of topological distances.
+
+```{r}
+matDist <- distances(graph = karateClub, mode = "all")
+margAvg <- apply(X = matDist, MARGIN = 1, FUN = mean)
+globalAvg <- mean(margAvg)
+```
+
+The average distance in the Karate Club is 2.33. In the Facebook worldwide network, the average distance is 3,5 (see Bhagat et al., 2016, Three and a half degree of separation, URL: https://research.fb.com/three-and-a-half-degrees-of-separation). 
+
+
+### Request OSRM API
+
+Finding shortest paths within a social network gives the structure the social group. Finding shortest paths within a spatial network gives the route we should follow to get from an origin to a destination. It is called **routing**. The routing process in a massive spatial network needs a big amount of data (the spatial lines converted into a graph object), a big amount of memory and a big amount of computation. 
+
+Instead of trying a local implementation, we will use an external service: the Open Source Routing Machine (OSRM: http://project-osrm.org) based on OpenStreetMap data. The OSRM API can be directly requested or it can be requested through the `osrm` R package. 
+
+**Warning:** the `osrm` package is in a transition status: the inputs needed are `sp` objects, the outputs produced are `sf` objects. The function `as_Spatial()` is used to convert `sf` to `sp` structure.
+
+Create Eiffel Tower spatial point.
+
+```{r}
+eiffelTower <- tibble(ID = "EiffelTower", X = 2.294466, Y = 48.858251) %>% 
+  st_as_sf(coords = c("X", "Y"),
+           agr = "constant",
+           crs = 4326,
+           stringsAsFactors = FALSE)
+```
+
+Re-project Airbnb homes (homes existing in 2012).
+
+```{r}
+pts2012Longlat <- pts2012 %>% st_transform(crs = 4326)
+```
+
+Extract time or distance values from the OSRM API with the `osrm` package.
+
+```{r}
+distTable <- osrmTable(src = as_Spatial(pts2012Longlat), 
+                       dst = as_Spatial(eiffelTower), 
+                       measure = "distance")
+```
+
+The public OSRM API has limitations. To overpass such limitations it is possible to install an instance of the routing machine on your own server or local machine. Here we can also split the request.
+
+```{r}
+splitSize <- c(0, 200, 400, 600, 800, nrow(pts2012Longlat))
+allValues <- vector()
+for(i in 1:length(splitSize) - 1){
+  initId <- splitSize[i] + 1
+  endId <- splitSize[i + 1]
+  tempTable <- osrmTable(src = as_Spatial(pts2012Longlat[initId:endId, ]), 
+                         dst = as_Spatial(eiffelTower), 
+                         measure = "distance")
+  tempValues <- tempTable$durations %>% as.vector()
+  allValues <- append(allValues, tempValues)
+}
+
+```
+
+
+
+Extract shortest paths from the OSRM API with the `osrm` package. The `osrmRoute()` function extract a route from one origin to one destination so we need a for loop to extract the whole set of routes.
+
+```{r, eval=FALSE}
+roadsToTower <- st_sf(ID = NULL, geometry = st_sfc(), crs = 4326)
+
+for(i in 1:nrow(pts2012Longlat)){
+  tempRoute <- osrmRoute(src = as_Spatial(pts2012Longlat[i, ]),
+                         dst = as_Spatial(eiffelTower),
+                         overview = "full")
+  oneLineStr <- st_linestring(x = as.matrix(tempRoute), dim = "XY")
+  oneLine <- st_sf(ID = i, geometry = st_sfc(oneLineStr), crs = 4326)
+  roadsToTower <- rbind(roadsToTower, oneLine)
+  cat(i, "\n")
+}
+```
+
+Plot the routes with `leaflet`.
+
+```{r, echo=FALSE}
+roadsToTower <- readRDS(file = "DATA/roadstotower.Rds")
+```
+
+```{r}
+leaflet() %>% 
+  addProviderTiles(provider = "Stamen.TonerLite") %>% 
+  addPolylines(data = roadsToTower, color = "firebrick", weight = 1.8, opacity = 0.2) %>% 
+  addCircleMarkers(data = pts2012 %>% st_transform(crs = 4326), radius = 2, stroke = FALSE, fill = TRUE, fillColor = "firebrick", fillOpacity = 0.6) %>% 
+  addCircleMarkers(data = eiffelTower, radius = 8, stroke = FALSE, fill = TRUE, fillColor = "black", fillOpacity = 0.9)
+
+
+```
+
+
+
+## Statistical analysis with areal units
+
+### Interpolation of Airbnb prices (point level) 
+
+Extract the prices and compute price per accommodate.
+
+```{r}
+pts2014$pricenum <- gsub(pts2014$price, pattern = "\\$|,", replacement = "") %>% as.numeric()
+pts2014$priceper <- pts2014$pricenum / pts2014$accommodates
+summary(pts2014$priceper)
+```
+
+Several packages propose functions to perform interpolations. The main package may be the `gstat` package and its `idw()` or `krige()` functions. Here we use the `SpatialPosition` package: its is easy to use and easy to parameter but much slower than `gstat`.
+
+```{r}
+boundParis <- sfIris %>% group_by(DEP) %>% summarise()
+plot(boundParis$geometry)
+
+smoothPrice <- smoothy(knownpts = as_Spatial(pts2014), 
+                       varname = "priceper", 
+                       typefct = "pareto",
+                       beta = 2,
+                       span = 200,
+                       resolution = 80,
+                       bypassctrl = TRUE)
+
+smoothRaster <- rasterStewart(smoothPrice, mask = as_Spatial(boundParis))
+plotStewart(x = smoothRaster, typec = "quantile", nclass = 6)
+plot(boundParis$geometry, add = TRUE)
+```
+
+```{r}
+summary(pts2014$priceper)
+cellStats(smoothRaster, summary)
+```
+
+
+Compute median prices within the spatial units.
+
+```{r}
+unitsVsPoints <- st_intersects(x = sfIris, y = pts2014)
+sfIris$MEDPRICE <- sapply(unitsVsPoints, function(x) median(pts2014[["priceper"]][x]))
+```
+
+Map the median prices at areal unit level.
+
+```{r}
+choroLayer(x = sfIris,
+           var = "MEDPRICE",
+           method = "quantile",
+           nclass = 6,
+           col = carto.pal(pal1 = "red.pal", n1 = 6),
+           border = "grey")
+```
+
+
+### Dissimilarity index
+
+Reclassify and aggregate categories of the property type variable and the room type variable.
+
+```{r}
+# aggregated room type
+table(pts2014$room_type)
+pts2014$room_class <- ifelse(test = pts2014$room_type == "Entire home/apt", 
+                             yes = "Home", 
+                             no = "Room")
+
+table(pts2014$room_class)
+
+# aggregated property type
+table(pts2014$property_type)
+pts2014$property_class <- ifelse(pts2014$property_type %in% c("Apartment", "Condominium", "Loft", "House"), pts2014$property_type, "Other")
+
+table(pts2014$property_class)
+
+```
+
+Count the number of entire homes and private rooms in each spatial unit.
+
+```{r}
+pointsVsUnits <- st_intersects(x = pts2014, y = sfIris)
+pts2014$CODE_IRIS <- sapply(pointsVsUnits, function(x) sfIris[["CODE_IRIS"]][x])
+homeType <- pts2014 %>% 
+  st_set_geometry(NULL) %>% 
+  dcast(data = ., formula = CODE_IRIS ~ room_class, fill = 0, value.var = "CODE_IRIS", fun.aggregate = length)
+```
+
+
+Compute the dissimilarity index for private rooms.
+
+```{r}
+homeType$pct_home <- homeType$Home / sum(homeType$Home)
+homeType$pct_room <- homeType$Room / sum(homeType$Room)
+homeType$pct_dif <- homeType$pct_room - homeType$pct_home
+dissIndex <- 0.5 * sum(abs(homeType$pct_dif))
+dissIndex
+```
+
+Map the difference between the distribution of rooms and the distribution of entire homes.
+
+```{r}
+sfIris <- left_join(sfIris, homeType, by = "CODE_IRIS")
+choroLayer(x = sfIris,
+           var = "pct_dif",
+           method = "quantile",
+           nclass = 6,
+           col = carto.pal(pal1 = "harmo.pal", n1 = 6),
+           border = "grey")
+```
+
+### Spatial autocorrelation index
+
+Compute the spatial autocorrelation of Airbnb homes' prices. The `spdep` package (Spatial Dependence) can be used to compute autocorrelation indexes and other spatial dependence measures. It offers several useful functions to create a list of neighbors from the spatial polygons, to weight the values according to the neighborhood definition, to compute the Moran test. Here we propose a raw version of the Moran index considered as the slope of the linear regression between ego values and their neighborhood average.
+
+```{r}
+moranData <- sfIris %>% filter(MEDPRICE < 100)
+neiList <- st_intersects(x = moranData, y = moranData)
+moranData$LAGPRICE <- sapply(neiList, function(x) mean(moranData[["MEDPRICE"]][x[-1]], na.rm = TRUE))
+
+
+linMod <- lm(formula = LAGPRICE ~ MEDPRICE, data = moranData)
+summary(linMod)
+
+ggplot(moranData, aes(MEDPRICE, LAGPRICE)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE, color = "firebrick") +
+  scale_x_continuous("Ego value (median price)") +
+  scale_y_continuous("Lagged value (neighborhood avg.)") +
+  theme_bw()
+
+```
+
+
+### Linear regression model
+
+We explain the variation of the median Airbnb price at the areal level. First we need to explore the structure of correlations. We extract a subset of relevant variables and delete the geometry information.
+
+```{r}
+regData <- left_join(moranData, rawIncome, by = c("CODE_IRIS" = "IRIS"))
+regDataSubset <- regData %>% 
+  st_set_geometry(NULL) %>% 
+  select(MEDPRICE, DEC_TP6014, DEC_Q114, DEC_MED14, DEC_Q314, DEC_D114, DEC_D214, DEC_D814, DEC_D914)
+```
+
+
+We then compute the correlation matrix (Pearson correlation and Spearman correlation) and plot the bivariate relations.
+
+```{r}
+cor(regDataSubset, use = "complete.obs", method = "pearson")
+cor(regDataSubset, use = "complete.obs", method = "spearman")
+plot(regDataSubset, pch = 20)
+```
+
+We try a first linear model with the 9th decile of income.
+
+```{r}
+hist(regData$DEC_D914, col = "grey", border = "white", main = "Distribution of the 9th decile of income")
+priceModel <- lm(formula = MEDPRICE ~ DEC_D914, data = regData)
+summary(priceModel)
+```
+
+Check the properties of the regression model.
+
+```{r}
+par(mfrow = c(2,2))
+plot(priceModel, pch = 20)
+par(mfrow = c(1,1))
+```
+
+
+```{r}
+idComplete <- names(priceModel$residuals) %>% as.integer()
+regData[idComplete, "RESID"] <- priceModel$residuals
+
+choroLayer(x = regData,
+           var = "RESID",
+           method = "quantile",
+           nclass = 6,
+           col = carto.pal(pal1 = "green.pal", n1 = 6),
+           border = "grey")
+
+```
+
+### Spatial autoregressive regression
+
+Looking at their spatial distribution we see that the residuals are not at all spatially random. In this example we should consider that an endogeneous effect: the value of a dwelling (rental or sales) depends on the value of the dwellings in the neighborhood. A frequent approach in land values modeling is to inject the neighborhood average value (lagged values) as a regressor and build a **spatial autoregressive regression** (SAR).
+
+
+```{r}
+sarModel <- lm(formula = MEDPRICE ~ DEC_D914 + LAGPRICE, data = regData)
+summary(sarModel)
+```
+
+```{r}
+idComplete <- names(sarModel$residuals) %>% as.integer()
+regData[idComplete, "RESIDSAR"] <- sarModel$residuals
+
+choroLayer(x = regData,
+           var = "RESIDSAR",
+           method = "quantile",
+           nclass = 6,
+           col = carto.pal(pal1 = "purple.pal", n1 = 6),
+           border = "grey")
+
+```
+
