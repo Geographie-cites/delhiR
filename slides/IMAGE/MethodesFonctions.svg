@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1052.3622 744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="MethodesFonctions.svg"
+   inkscape:export-filename="/home/hc/Documents/HADRI/ArtProj/G29_SeminR/SeminR2016/IMAGE/MethodesFonctions.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="468.68236"
+     inkscape:cy="386.58232"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1031"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="true"
+     inkscape:snap-bbox="false"
+     inkscape:snap-text-baseline="true"
+     inkscape:bbox-nodes="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4083"
+       dotted="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4270"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4282"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) translate(1,0)" />
+    </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-5-5">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-6-4"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-82">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-28"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-5">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-6"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <rect
+       style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.35"
+       id="rect5173-8"
+       width="1240"
+       height="60"
+       x="41"
+       y="703.36218" />
+    <rect
+       style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.35"
+       id="rect5173-8-4"
+       width="1240"
+       height="60"
+       x="41"
+       y="773.36218" />
+    <rect
+       style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.35"
+       id="rect5173-8-8"
+       width="1240"
+       height="60"
+       x="41"
+       y="843.36218" />
+    <rect
+       style="opacity:0.35;fill:#808080;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6434"
+       width="453.5"
+       height="338.5"
+       x="354"
+       y="572.36218" />
+    <rect
+       style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.35"
+       id="rect5173"
+       width="1240"
+       height="60"
+       x="41"
+       y="633.36218" />
+    <rect
+       style="opacity:0.35;fill:#808080;fill-opacity:1;stroke:none;stroke-width:3.00000024;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6434-6-4"
+       width="456.5"
+       height="338.5"
+       x="813.5"
+       y="572.36218" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(17.142578,506.47272)"><flowRegion
+         id="flowRegion2987-0"><rect
+           id="rect2989-6"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">INTERPOLATION</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-9"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(17.142578,646.47272)"><flowRegion
+         id="flowRegion2987-0-0"><rect
+           id="rect2989-6-5"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-4"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">RÉGRESSION SPATIALE</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-9-9"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(17.142578,576.47272)"><flowRegion
+         id="flowRegion2987-0-0-4"><rect
+           id="rect2989-6-5-5"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-4-7"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">INTERACTION SPATIALE</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-7"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(17.142578,436.47272)"><flowRegion
+         id="flowRegion2987-0-3"><rect
+           id="rect2989-6-8"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-6"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">DENSITÉ</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-97-1-9-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(327.14258,436.47272)"><flowRegion
+         id="flowRegion2987-0-7-2-9-3"><rect
+           id="rect2989-6-2-5-4-7"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-7-1-5-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">KDE - <flowSpan
+   style="font-style:italic"
+   id="flowSpan4295"> Kernel Density Estimator</flowSpan></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-97-1-9-4-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(327.14258,492.47272)"><flowRegion
+         id="flowRegion2987-0-7-2-9-3-6"><rect
+           id="rect2989-6-2-5-4-7-7"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-7-1-5-9-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Simple : IDW - <flowSpan
+   style="font-style:italic"
+   id="flowSpan4299">Inverse Weighted Distance</flowSpan></flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="flowPara4297">Ajustée : <flowSpan
+   style="font-style:italic"
+   id="flowSpan4303">trend analysis</flowSpan>, <flowSpan
+   style="font-style:italic"
+   id="flowSpan4301"> kriging</flowSpan></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-97-1-9-4-2"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(327.14258,560.47272)"><flowRegion
+         id="flowRegion2987-0-7-2-9-3-69"><rect
+           id="rect2989-6-2-5-4-7-9"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-7-1-5-9-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Modèles gravitaires de position</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="flowPara4305">(<flowSpan
+   style="font-style:italic"
+   id="flowSpan4307">Stewart's potentials</flowSpan>) </flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-97-1-9-4-2-8"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(327.14258,646.47272)"><flowRegion
+         id="flowRegion2987-0-7-2-9-3-69-4"><rect
+           id="rect2989-6-2-5-4-7-9-8"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-7-1-5-9-0-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">GWR - <flowSpan
+   style="font-style:italic"
+   id="flowSpan4309">Geographically Weighted Regression </flowSpan></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-7-1"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(476.2427,376.13522)"><flowRegion
+         id="flowRegion2987-0-3-5"><rect
+           id="rect2989-6-8-7"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-6-2"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">MÉTHODES</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-97-1-9-4-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(787.14258,425.00753)"><flowRegion
+         id="flowRegion2987-0-7-2-9-3-697"><rect
+           id="rect2989-6-2-5-4-7-2"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-7-1-5-9-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:monospace;-inkscape-font-specification:monospace"
+   id="flowSpan4338">kde2d</flowSpan> (MASS) ; <flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:monospace;-inkscape-font-specification:monospace"
+   id="flowSpan4342">kernel.factor(spatstat); geom_density2d</flowSpan> (ggplot2)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-97-1-9-4-0-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(787.14258,495.00753)"><flowRegion
+         id="flowRegion2987-0-7-2-9-3-697-8"><rect
+           id="rect2989-6-2-5-4-7-2-3"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-7-1-5-9-2-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:monospace;-inkscape-font-specification:monospace"
+   id="flowSpan4338-2">idw<flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+   id="flowSpan4374"> (gstat) ; </flowSpan>krige</flowSpan> (gstat) ; <flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:monospace;-inkscape-font-specification:monospace"
+   id="flowSpan4342-1">idw</flowSpan> (spatstat) ; </flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="flowPara4380"><flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
+   id="flowSpan4382">lm</flowSpan> &amp; glm (stats) </flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-97-1-9-4-0-5"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(787.14258,577.00753)"><flowRegion
+         id="flowRegion2987-0-7-2-9-3-697-9"><rect
+           id="rect2989-6-2-5-4-7-2-5"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-7-1-5-9-2-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:monospace;-inkscape-font-specification:monospace"
+   id="flowSpan4338-1">stewart<flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+   id="flowSpan4414"> ; </flowSpan>reilly<flowSpan
+   style="-inkscape-font-specification:Ubuntu;font-family:Ubuntu;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="flowSpan4416"> ; </flowSpan>huff</flowSpan> (SpatialPosition)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-97-1-9-4-0-5-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(787.14258,649.00753)"><flowRegion
+         id="flowRegion2987-0-7-2-9-3-697-9-1"><rect
+           id="rect2989-6-2-5-4-7-2-5-1"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-7-1-5-9-2-9-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:monospace;-inkscape-font-specification:monospace"
+   id="flowSpan4338-1-9">gwr</flowSpan>  (spgwr)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2985-3-7-1-8"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(881.14258,376.47272)"><flowRegion
+         id="flowRegion2987-0-3-5-6"><rect
+           id="rect2989-6-8-7-2"
+           width="450.00027"
+           height="82.813026"
+           x="42.857143"
+           y="213.07646"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+         id="flowPara2991-2-6-2-3"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Medium';text-align:start;writing-mode:lr-tb;text-anchor:start">FONCTIONS (PACKAGES)</flowPara></flowRoot>  </g>
+</svg>

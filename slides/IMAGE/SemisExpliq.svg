@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="SemisExpliq.svg"
+   inkscape:export-filename="/home/hc/Documents/ArtProj/14_ElementR/Manuel/PHASE2/MISFORME/images/MatGraph.png"
+   inkscape:export-xdpi="250"
+   inkscape:export-ydpi="250">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path4662"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4662-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4662-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-86"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4662-0"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-3"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4662-22"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5231"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5233"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5235"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5237"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5239"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5241"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-36"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4662-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3210"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3212"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3214"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3216"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3218"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3220"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4662-20"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3849"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3851"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3853"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3855"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3857"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3859"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-5">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-6"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-5-9">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-6-6"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-8">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-2"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-5-7">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-6-7"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-7">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-7"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-5-2">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-6-5"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-55">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-79"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-5-2-8">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-6-5-6"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-55-8">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-79-1"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-5-7-1">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-6-7-2"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-7-1">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-7-3"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-5-5">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-6-4"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4398-5-82">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:10.07130527"
+         id="rect4400-1-28"
+         width="5480.5493"
+         height="4275.229"
+         x="-2784.6033"
+         y="-1384.0426" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="450.53299"
+     inkscape:cy="599.17678"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1031"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="true"
+     inkscape:snap-bbox="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       dotted="true" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="405.71428,535"
+       id="guide3482" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#1a1a1a;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-4"
+       width="26.457146"
+       height="208.60001"
+       x="-3.1571455"
+       y="193.06218"
+       ry="0" />
+    <rect
+       style="fill:none;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4"
+       width="228.60001"
+       height="208.60001"
+       x="30.700001"
+       y="193.06218"
+       ry="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4347"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+       transform="matrix(0,-1,1,0,-103.0353,399.51843)"><flowRegion
+         id="flowRegion4349"><rect
+           id="rect4351"
+           width="188.13345"
+           height="65.659912"
+           x="9.0913725"
+           y="100.79849"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium" /></flowRegion><flowPara
+         id="flowPara4353"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"><flowSpan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+   id="flowSpan4355">Ressources </flowSpan>localisées</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-12"
+       width="228.60001"
+       height="208.60001"
+       x="270.70001"
+       y="193.06218"
+       ry="0" />
+    <rect
+       style="fill:none;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-6"
+       width="228.60001"
+       height="208.60001"
+       x="510.70001"
+       y="193.06218"
+       ry="0" />
+    <rect
+       style="fill:#1a1a1a;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-4-2"
+       width="26.457146"
+       height="208.60001"
+       x="-3.1571455"
+       y="413.06219"
+       ry="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4347-1-1"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+       transform="matrix(0,-1,1,0,-103.0353,632.20593)"><flowRegion
+         id="flowRegion4349-5-2"><rect
+           id="rect4351-7-5"
+           width="205.49568"
+           height="65.52253"
+           x="9.0913725"
+           y="100.79849"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium" /></flowRegion><flowPara
+         id="flowPara4353-5-5"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"><flowSpan
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+           id="flowSpan4355-0-0">Agrégats de ressources</flowSpan></flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-5"
+       width="228.60001"
+       height="208.60001"
+       x="30.700001"
+       y="413.06219"
+       ry="0" />
+    <rect
+       style="fill:none;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-6-8"
+       width="228.60001"
+       height="208.60001"
+       x="510.70001"
+       y="413.06219"
+       ry="0" />
+    <rect
+       style="fill:#1a1a1a;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-4-9"
+       width="24.31057"
+       height="228.60001"
+       x="161.35159"
+       y="-259.30002"
+       ry="0"
+       transform="matrix(0,1,-1,0,0,0)" />
+    <rect
+       style="fill:#1a1a1a;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-4-9-7"
+       width="24.31057"
+       height="228.60001"
+       x="161.35159"
+       y="-499.30002"
+       ry="0"
+       transform="matrix(0,1,-1,0,0,0)" />
+    <rect
+       style="fill:#1a1a1a;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-4-9-1"
+       width="24.31057"
+       height="228.60001"
+       x="161.35159"
+       y="-739.29999"
+       ry="0"
+       transform="matrix(0,1,-1,0,0,0)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4347-5"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+       transform="translate(44.84375,61.32688)"><flowRegion
+         id="flowRegion4349-4"><rect
+           id="rect4351-5"
+           width="188.13345"
+           height="65.659912"
+           x="9.0913725"
+           y="100.79849"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium" /></flowRegion><flowPara
+         id="flowPara4353-58"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Agents localisés</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4347-5-7"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+       transform="translate(284.84375,61.32688)"><flowRegion
+         id="flowRegion4349-4-3"><rect
+           id="rect4351-5-1"
+           width="188.13345"
+           height="65.659912"
+           x="9.0913725"
+           y="100.79849"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium" /></flowRegion><flowPara
+         id="flowPara4353-58-4"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Agents potentiels</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4347-5-7-4"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+       transform="translate(524.84375,61.32688)"><flowRegion
+         id="flowRegion4349-4-3-4"><rect
+           id="rect4351-5-1-0"
+           width="188.13345"
+           height="65.659912"
+           x="9.0913725"
+           y="100.79849"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium" /></flowRegion><flowPara
+         id="flowPara4353-58-4-6"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium">Agrégats d'agents</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#1a1a1a;stroke-width:1.39999998;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3202-4-12-8"
+       width="228.60001"
+       height="208.60001"
+       x="270.70001"
+       y="413.06219"
+       ry="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3262"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       transform="translate(-161.95312,-398.42312)"><flowRegion
+         id="flowRegion3264"><rect
+           id="rect3266"
+           width="531.34021"
+           height="173.74623"
+           x="44.446712"
+           y="674.56512"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3268"
+         style="font-size:16px;text-align:center;text-anchor:middle">Mise en rapport de </flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3350">deux semis de points</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3262-1"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       transform="translate(-166.10937,-198.42312)"><flowRegion
+         id="flowRegion3264-1"><rect
+           id="rect3266-1"
+           width="531.34021"
+           height="173.74623"
+           x="44.446712"
+           y="674.56512"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3268-6"
+         style="font-size:16px;text-align:center;text-anchor:middle">Mise en rapport d'un semis</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3299">de points simples (agents)</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3297">avec un semis de points </flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3301">pondérés (centroïdes)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3262-1-5"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       transform="translate(315.89062,-198.42312)"><flowRegion
+         id="flowRegion3264-1-7"><rect
+           id="rect3266-1-4"
+           width="531.34021"
+           height="173.74623"
+           x="44.446712"
+           y="674.56512"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3268-6-9"
+         style="font-size:16px;text-align:center;text-anchor:middle">Mise en rapport d'un semis</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3299-3">de centroïdes avec lui-même,</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3301-7">avec deux variables de poids </flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3348">(nbr. agents, nbr. ressources)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3262-9"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       transform="translate(75.890625,-416.42312)"><flowRegion
+         id="flowRegion3264-7"><rect
+           id="rect3266-9"
+           width="531.34021"
+           height="173.74623"
+           x="44.446712"
+           y="674.56512"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3350-4">Mise en rapport d'un semis</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3440">de points simples (ressources)</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3442">et d'une grille de localisation</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3444">(quasi-interpolation)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3262-1-4"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       transform="translate(314.04687,-416.42312)"><flowRegion
+         id="flowRegion3264-1-0"><rect
+           id="rect3266-1-49"
+           width="531.34021"
+           height="173.74623"
+           x="44.446712"
+           y="674.56512"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3268-6-5"
+         style="font-size:16px;text-align:center;text-anchor:middle">Mise en rapport d'un semis </flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3420">de points pondérés </flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3301-1">(centroïdes) avec un semis de </flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3432">points simples (ressources)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3262-9-0"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       transform="translate(73.890625,-198.42312)"><flowRegion
+         id="flowRegion3264-7-0"><rect
+           id="rect3266-9-3"
+           width="531.34021"
+           height="173.74623"
+           x="44.446712"
+           y="674.56512"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3440-5">Mise en rapport d'un semis de</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3484">points pondérés (centroïdes)</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3442-0">et d'une grille de localisation</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="flowPara3444-0">(quasi-interpolation)</flowPara></flowRoot>  </g>
+</svg>

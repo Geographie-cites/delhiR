@@ -1,0 +1,235 @@
+% Définition du répertoire contenant les images
+\graphicspath{{IMAGE/}}
+
+% FRAME Intro
+\begin{frame}
+
+\includegraphics[width=12cm]{Logos.pdf}
+
+\vfill
+
+\begin{center}
+
+\vspace*{1.5cm}
+
+\LARGE
+\textbf{Simulation}
+
+\vspace*{1.5cm}
+ DELHI GIS-R School
+
+
+\large
+9-12\up{th} April 2019
+
+\vspace*{1.5cm}
+
+
+\textbf{Hadrien Commenges \& Paul Chapron}
+
+{\small
+
+\vspace*{0.1cm}
+
+\url{hadrien.commenges@univ-paris1.fr}
+
+\url{paul.chapron@ign.fr}
+
+}
+
+\end{center}
+
+\end{frame}
+
+% FRAME
+\begin{frame}{Stochastic simulation }
+
+Stochastic simulation : data generation using \textbf{randomly drawn values}.
+
+\begin{itemize}
+\item \textbf{Monte Carlo:} generic term refering to process involving random process repetition.
+\item \textbf{Bootstrap:} re-sampling methods (usually to estimate distribution) 
+\item \textbf{Permutation:} reordering elements of a set   
+\end{itemize}
+
+~
+
+\textbf{Why ? }
+
+Most of the time:  to approach a distribution 
+
+\begin{itemize}
+\item (often) because the analytical way is hard 
+\item because (sometimes) there is no analytical way 
+\item because we look for robust estimation adequate to the use case data 
+\end{itemize}
+
+\end{frame}
+
+
+% FRAME
+\begin{frame}{Monte Carlo}
+
+$\rightarrow$ \textbf{Example:} iterated dice rolls \\
+$\rightarrow$ \textbf{Goal:} examplify the Law of Large Numbers
+
+~
+
+\textbf{Expected value $\mu$ of a dice roll:}
+
+$$
+\mu = \frac{1}{6} \times 1 + \frac{1}{6} \times 2 + \frac{1}{6} \times 3 + \frac{1}{6} \times 4 + \frac{1}{6} \times 5 + \frac{1}{6} \times 6
+$$
+
+
+$$
+\mu = \frac{1+2+3+4+5+6}{6} = 3,5
+$$
+
+~
+
+\textbf{(weak) Law of Large Numbers: }
+
+~
+\begin{center}
+$\bar{X_n} \to \mu$ when $n \to \infty$
+\end{center}
+
+~
+
+\emph{(sample average converges toward the expected value, for a sufficiently large sample)}
+
+\end{frame}
+
+
+% FRAME
+\begin{frame}{Monte Carlo}
+%TODO refaire figure EN
+\begin{figure}
+\includegraphics[width=11cm]{TirageDe.pdf}
+\end{figure}
+
+\end{frame}
+
+
+
+% FRAME
+\begin{frame}{Bootstrap}
+
+\textbf{Classical inference:}
+\begin{itemize}
+  \item Goal : approach  $\mu$ and $\sigma$  \textbf{parameters} of a distribution
+  \item $\bar{X}$ and $\sigma_X$ are computed on a \textbf{sample} X
+  \item Sampling of X and $\bar{X}$ / $\sigma_X$ computation are repeated 
+\end{itemize}
+
+~
+
+\textbf{Example:}
+\begin{itemize}
+  \item For a 12M population (people from Île-de-France).
+  \item People travel daily  between  0 and 200 km.
+  \item 500 samples are drawn,  100 people each.
+  \item For each sample, the average travel distance ($\bar{X}$) is computed .
+\end{itemize}
+
+~
+
+$\rightarrow$ these 500 average values form a \textit{distribution}: the \textbf{sampling distribution of the mean}
+
+\end{frame}
+
+
+
+% FRAME
+\begin{frame}{Bootstrap}
+
+\textbf{Sampling distribution of the mean} (500 mean values):
+ 
+\begin{figure}
+\includegraphics[width=11cm]{DensiteNormal_EN.pdf}
+\end{figure}
+
+where $\mu$ et $\sigma$ are the \textbf{parameters} --  real mean and standard deviation of the population -- and $n$ is the  \textbf{sample size}. 
+
+~
+
+$\rightarrow$ This is \textbf{central limit theorem} (\textbf{CLT}).
+
+\end{frame}
+
+
+
+
+% FRAME
+\begin{frame}{Bootstrap}
+
+\begin{itemize}
+\item \textbf{General inference idea:} the sample (which is known) allows to approach the parameters of the population distribution (which is unknown)
+\item \textbf{General bootstrap idea:} re-sampling (which is known) from the sample (which is known) give insights about what would sampling look like on the whole population.
+\item \textbf{Example:} to estimate the variance of the sampling distribution , we compute the variance of the re-sampling distribution of the mean.
+\end{itemize}
+
+\end{frame}
+
+
+
+% FRAME
+\begin{frame}{Bootstrap}
+
+\textbf{Daily travel distance for Île-de-France people}
+%TODO figure EN
+\begin{figure}
+\includegraphics[width=11cm]{PopDist.png}
+\end{figure}
+
+\footnotesize
+Source: Enquête Globale Transport 2010 (French transportation national census)
+\normalsize
+
+\end{frame}
+
+
+
+
+% FRAME
+\begin{frame}{Bootstrap}
+
+\textbf{Sampling distribution of the mean}
+%TODO figure EN
+
+\begin{figure}
+\includegraphics[width=11cm]{SampDist.png}
+\end{figure}
+
+\end{frame}
+
+
+% FRAME
+\begin{frame}{Bootstrap}
+
+\textbf{Re-sampling of the mean} on a sample 
+
+\begin{figure}
+\includegraphics[width=11cm]{SampDistBoot.png}
+\end{figure}
+
+\end{frame}
+
+
+% FRAME
+\begin{frame}{Bootstrap}
+
+
+\textbf{Power of the Bootstrap}: this technique offers
+
+\begin{itemize}
+\item compute estimates (mean, variance) without any hypothesis or \textit{a priori} knowledge on the population
+\item compute estimates variability  (confidence interval) without any hypothesis or \textit{a priori} knowledge on the population (\textit{distribution-free confidence intervals})
+\item assess the stability of some model results  (\textit{cross-validation})
+\end{itemize}
+
+\end{frame}
+
+
+
