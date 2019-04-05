@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="887.97321"
+   height="443.43497"
+   viewBox="0 0 887.97321 443.43497"
+   preserveAspectRatio="none"
+   version="1.1"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Lorenz_EN.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata31">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs29" />
+  <sodipodi:namedview
+     inkscape:cy="250.68777"
+     inkscape:cx="350.62883"
+     inkscape:zoom="0.86831673"
+     inkscape:window-height="1056"
+     inkscape:window-width="1855"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:snap-bbox="false"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <sodipodi:guide
+       orientation="1,0"
+       position="532.69271,225.3245"
+       id="guide3088"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <style
+     id="style4">
+text {
+	font-family : Verdana, Tahoma, sans-serif;
+	font-size : 15px;
+	fill : black;
+	stroke : none;
+}
+</style>
+  <desc
+     id="desc6">Gini Coefficient in Economics</desc>
+  <path
+     inkscape:connector-curvature="0"
+     d="M 478.87546,409.43421 866.84809,24.283544 A 387.3777,385.74901 0.08843187 0 1 478.87546,409.43421 Z"
+     style="fill:#999999;fill-opacity:1;stroke:none"
+     id="path8-7" />
+  <!-- Curve -->
+  <path
+     d="M 18.3537,412.41306 418.3537,12.413061 A 400,400 0 0 1 18.3537,412.41306 Z"
+     style="fill:#ffb380;fill-opacity:1;stroke:#000000;stroke-width:2"
+     id="path8"
+     inkscape:connector-curvature="0" />
+  <!-- Axes -->
+  <path
+     d="M 18.3537,412.41306 H 418.3537 L 403.52236,407.79219 408.3537,412.41306 403.3537,417.60975 418.3537,412.41306 Z"
+     style="stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+     id="path10"
+     sodipodi:nodetypes="ccccccc"
+     inkscape:connector-curvature="0" />
+  <path
+     d="M 418.3537,412.41306 V 12.413061 L 412.07521,27.514851 418.3537,22.413061 424.53039,27.820231 418.3537,12.413061 Z"
+     style="stroke:#000000;stroke-width:2"
+     id="path12"
+     sodipodi:nodetypes="ccccccc"
+     inkscape:connector-curvature="0" />
+  <!-- Axes Labels -->
+  <!-- Other Labels -->
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot2993"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     transform="rotate(-90,-155.49172,349.56819)"><flowRegion
+       id="flowRegion2995"><rect
+         id="rect2997"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776" /></flowRegion><flowPara
+       id="flowPara2999"
+       style="font-size:12px;line-height:1.25">Source : after BenFrantzDale, Wikimedia</flowPara></flowRoot>  <flowRoot
+     transform="rotate(-45.116675,-98.305196,49.610079)"
+     xml:space="preserve"
+     id="flowRoot2993-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1"><rect
+         id="rect2997-4"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776" /></flowRegion><flowPara
+       id="flowPara2999-7"
+       style="font-size:15px;line-height:1.25">Lorenz curve</flowPara></flowRoot>  <flowRoot
+     transform="translate(427.72776,-93.061405)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-5"><rect
+         id="rect2997-4-6-2"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776" /></flowRegion><flowPara
+       id="flowPara2999-7-4-7"
+       style="font-size:15px;line-height:1.25">100 %</flowPara></flowRoot>  <flowRoot
+     transform="translate(469.51986,-499.24827)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-2-9"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-5-9"><rect
+         id="rect2997-4-6-2-3"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776" /></flowRegion><flowPara
+       id="flowPara2999-7-4-7-4"
+       style="font-size:15px;line-height:1.25">100 %</flowPara></flowRoot>  <flowRoot
+     transform="rotate(-90,93.253831,180.4268)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-8"><rect
+         id="rect2997-4-6-3"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776" /></flowRegion><flowPara
+       id="flowPara2999-7-4-79"
+       style="font-size:15px;line-height:1.25">Cumulative income distribution</flowPara></flowRoot>  <flowRoot
+     transform="translate(142.10459,-92.482367)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-5-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-8-8"><rect
+         id="rect2997-4-6-3-0"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776" /></flowRegion><flowPara
+       id="flowPara2999-7-4-79-2"
+       style="font-size:15px;line-height:1.25">Cumulative proportion ofpopulation</flowPara></flowRoot>  <flowRoot
+     transform="translate(648.82966,-96.290697)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-5-5-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#800000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-8-8-6"><rect
+         id="rect2997-4-6-3-0-2"
+         width="426.71521"
+         height="52.117867"
+         x="-42.345783"
+         y="508.95776"
+         style="fill:#800000" /></flowRegion><flowPara
+       id="flowPara2999-7-4-79-2-9"
+       style="font-size:15px;line-height:1.25;fill:#800000">Perfect inequality distribution</flowPara></flowRoot>  <path
+     style="fill:none;stroke:#800000;stroke-width:3.00000024;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 475.14439,410.91172 H 867.65724 V 21.45265"
+     id="path3250"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#008000;stroke-width:2.99999952;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 475.07842,411.07945 867.89662,21.111416"
+     id="path4020"
+     inkscape:connector-curvature="0" />
+  <flowRoot
+     transform="translate(737.70303,-267.6313)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-5-5-5-5-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-8-8-6-9-4"><rect
+         id="rect2997-4-6-3-0-2-2-3"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776" /></flowRegion><flowPara
+       id="flowPara2999-7-4-79-2-9-6-7"
+       style="font-weight:500;font-size:28px;line-height:1.25;-inkscape-font-specification:'Ubuntu Medium'">A</flowPara></flowRoot>  <flowRoot
+     transform="translate(832.13861,-181.25729)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-5-5-5-5-2-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-8-8-6-9-4-2"><rect
+         id="rect2997-4-6-3-0-2-2-3-6"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776" /></flowRegion><flowPara
+       id="flowPara2999-7-4-79-2-9-6-7-6"
+       style="font-weight:500;font-size:28px;line-height:1.25;-inkscape-font-specification:'Ubuntu Medium'">B</flowPara></flowRoot>  <flowRoot
+     transform="rotate(-44.832948,-5.5288967,-343.45824)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-5-5-5-8"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-8-8-6-1"><rect
+         id="rect2997-4-6-3-0-2-6"
+         width="355.81934"
+         height="72.742432"
+         x="-42.345783"
+         y="508.95776"
+         style="fill:#008000" /></flowRegion><flowPara
+       id="flowPara2999-7-4-79-2-9-1"
+       style="font-size:15px;line-height:1.25;fill:#008000">Perfect equality line</flowPara></flowRoot>  <flowRoot
+     transform="translate(575.03646,-475.03466)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-5-5-5-5-2-0"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-8-8-6-9-4-6"><rect
+         id="rect2997-4-6-3-0-2-2-3-8"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776" /></flowRegion><flowPara
+       id="flowPara2999-7-4-79-2-9-6-7-1"
+       style="font-weight:500;font-size:28px;line-height:1.25;-inkscape-font-specification:'Ubuntu Medium'">G = A / (A+B)</flowPara></flowRoot>  <rect
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#333333;stroke-width:1.20000005;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     id="rect4148"
+     width="886.77319"
+     height="442.23495"
+     x="0.60000002"
+     y="0.60000002" />
+  <flowRoot
+     transform="translate(575.03646,-424.88408)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-5-5-5-5-2-0-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-8-8-6-9-4-6-9"><rect
+         id="rect2997-4-6-3-0-2-2-3-8-8"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776"
+         style="fill:#008000" /></flowRegion><flowPara
+       id="flowPara2999-7-4-79-2-9-6-7-1-9"
+       style="font-weight:500;font-size:22px;line-height:1.25;-inkscape-font-specification:'Ubuntu Medium';fill:#008000">G = 0 / 1 = 0</flowPara></flowRoot>  <flowRoot
+     transform="translate(575.03646,-396.38211)"
+     xml:space="preserve"
+     id="flowRoot2993-3-0-5-5-5-5-2-0-2-6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#800000;fill-opacity:1;stroke:none"><flowRegion
+       id="flowRegion2995-1-4-8-8-6-9-4-6-9-2"><rect
+         id="rect2997-4-6-3-0-2-2-3-8-8-8"
+         width="275.24759"
+         height="87.948936"
+         x="-42.345783"
+         y="508.95776"
+         style="fill:#800000" /></flowRegion><flowPara
+       id="flowPara2999-7-4-79-2-9-6-7-1-9-5"
+       style="font-weight:500;font-size:22px;line-height:1.25;-inkscape-font-specification:'Ubuntu Medium';fill:#800000">G = 1 / 1 = 1</flowPara></flowRoot></svg>
