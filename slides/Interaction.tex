@@ -13,7 +13,7 @@
 \vspace*{1.5cm}
 
 \LARGE
-\textbf{Interactions}
+\textbf{Interactions \& Networks}
 
 \vspace*{1.5cm}
  DELHI GIS-R School
@@ -90,6 +90,247 @@ Interacting systems can be represented  by the \textbf{relations} between consti
 \end{frame}
 
 
+
+% FRAME
+\begin{frame}{Network Analysis}
+
+Leonhard Euler and the \textbf{Seven Bridges of Königsberg} (Kaliningrad).
+
+
+\begin{figure}
+  \includegraphics[width=10cm]{Konigsberg.png}
+\end{figure}
+
+\end{frame}
+
+
+% FRAME
+\begin{frame}{Network analysis}
+
+\begin{figure}
+  \includegraphics[width=5cm]{Konigsberg_graph.png}
+\end{figure}
+
+~
+
+\begin{itemize}
+\item No \textbf{cycle eulérien} (parité des liens incidents)
+\item Pas de \textbf{chaîne eulérienne} (continuité du tracé)
+\end{itemize}
+
+
+\end{frame}
+
+
+
+% FRAME
+\begin{frame}{Graphs}
+
+A graph is a set of \textit{vertices}) connected by \textbf{edges}.
+
+
+
+Examples:
+
+\begin{itemize} 
+  \item \textbf{Transportation networks  :} e.g. Subway: nodes are  stations,  edges are lines.
+  \item \textbf{Social networks:} individuals (nodes) , social interactions (edges)
+  \item \textbf{Scientific collaboration networks:} Co-autorship (edges) among researchers (nodes)
+  \item \ldots
+\end{itemize}
+
+\end{frame}
+
+
+
+
+% FRAME
+\begin{frame}{Types of graphs}
+
+\textbf{Undirected graph:}
+
+\begin{figure}
+  \includegraphics[width=12cm]{MatGraph3_EN.pdf}
+\end{figure}
+
+\end{frame}
+
+
+% FRAME
+\begin{frame}{Types of graphs}
+
+\textbf{Directed graph :}
+
+\textit{arcs} are employed instead of \textit{edges} who are "undirected".
+
+\begin{figure}
+  \includegraphics[width=12cm]{MatGraph2_EN.pdf}
+\end{figure}
+
+\end{frame}
+
+
+
+% FRAME
+\begin{frame}{Types of graphs}
+
+\textbf{Weighted directed graph:}
+
+\begin{figure}
+  \includegraphics[width=12cm]{MatGraph1_EN.pdf}
+\end{figure}
+
+Also :
+\begin{itemize}
+  \item Weighted undirected graphs
+  \item Multi-graph ()
+  \item Multi-partite graphs (several types of nodes )
+  \item Hypergraphs (links between more than 2 nodes)
+  \item \ldots
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+% FRAME
+\begin{frame}{Network analysis : measures}
+
+\textbf{Global measures:}
+
+\begin{itemize}
+\item number of nodes
+\item number of edges
+\item (number of) connected components
+\item Density (ratio between nodes and edges)
+\item Diameter : max length among shortest paths 
+\item Connectivity : ratio between number of edges and possible number of edges
+\end{itemize}
+
+~
+
+$\rightarrow$ \textbf{Maximum number of edges (no loops) :}
+
+\begin{itemize}
+\item Planar graph : $3V - 6$
+\item Undirected non-planar graph: $\frac{V(V-1)}{2}$ 
+\item  Directed non-planar graph : $V(V-1)$
+\end{itemize}
+
+\end{frame}
+
+% FRAME
+\begin{frame}{Network analysis measures}
+
+\textbf{Nodes measures:}
+
+\begin{itemize}
+\item Degree: number of edges (neighbors) of a node 
+\item in-degree / out-degree : number of inomling arcs / outgoing arcs
+\item Weighted degree : sum of edges wights
+\item Closeness centrality:  inverse of the sum of the shorstest paths length to any other node in the graph
+\item Betweenness centrality: number of shortest paths between any two vertices of the graph that contain the node.
+\end{itemize}
+
+\end{frame}
+
+
+%FRAME
+\begin{frame}{Distances in Network}
+
+In a connected graph, there is many (an infinity) paths connecting one node to every other node. 
+
+
+\begin{figure}
+  \includegraphics[width=5cm]{Konigsberg_graph.png}
+\end{figure}
+
+
+The \textbf{shortest} of these paths is adopteed as a «\textbf{network distance}» indicator.
+
+\end{frame}
+
+%FRAME
+\begin{frame}{Djikstra Algorithm principles }
+
+Djikstra (1959) proposed a breadth-first algorithm for directed weighted graphs, to compute the shortest path between a node and the others
+
+~
+
+Given $G(V,E)$ a graph, 
+
+$V_{orig} \in V$  a node,
+
+$w(a,b)$ a function giving the weight of the edeges linking vertices $a$ and $b$ (or $+\infty$ if none)
+
+~ 
+
+\begin{itemize}
+\item The algorithm builds $P$ , a \textit{sub-graph} of $G$ so that any distance from $V_{orig}$ to a node $a\in P$ is known and minimum in $G$
+
+\item A Distance list from $V_{orig}$ to any $v \in V $ are maintained. Distance of a given path is the sum of its edges weights 
+
+\item $P$ grows by adding an edge $(a,b)$ of $P\times G $ if $d(V_{orig}, b)$ is minimum. 
+
+\item Algorithm terminates when $P$ is a \textit{minimum spanning tree}, i.e. a tree visiting every node with a minimal sum of edges weights.
+\end{itemize}
+~
+
+
+(Also works on undirected graphs, and for a given $V_{dest}$ destination node)
+
+
+
+\end{frame}
+
+
+
+%FRAME
+\begin{frame}{Djikstra's pseudo code}
+
+Init 
+
+$P \leftarrow \emptyset $
+
+$d(v) := 0 , \forall v \in V$ (distances to $V_{orig}$)
+
+
+$d(V_{orig}) :=0$
+
+~
+
+While $\exists v \in V$ such that $v\notin P$:
+
+\hspace{1cm} pick a node $a \notin P$ such that $d(a)$ is minimum
+
+\hspace{1cm} add $a$ to $P$
+
+\hspace{1cm} For each $ b \notin P$ such that $w(a,b) \neq \infty $
+
+\hspace{2cm} $d(b)=min(d(b),d(a)+w(a,b))$
+
+\hspace{1cm} End for each
+
+End While
+
+\end{frame}
+
+
+%FRAME
+\begin{frame}
+
+
+A good,  visualization is available at :
+ 
+\small
+ \url{https://www.cs.usfca.edu/~galles/visualization/Dijkstra.html}
+\end{frame}
+
+
+
+\begin{comment}
 
 % FRAME
 \begin{frame}{Distance and Interaction}
@@ -228,149 +469,4 @@ T_{ij} = k_i O_i \left[\exp(-\alpha x_{j-1}) - \exp(-\alpha x_{j}) \right]
 \end{frame}
 
 
-% FRAME
-\begin{frame}{Network Analysis}
-
-Leonhard Euler and the \textbf{Seven Bridges of Königsberg} (Kaliningrad).
-
-
-\begin{figure}
-  \includegraphics[width=10cm]{Konigsberg.png}
-\end{figure}
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}{Network analysis}
-
-\begin{figure}
-  \includegraphics[width=5cm]{Konigsberg_graph.png}
-\end{figure}
-
-~
-
-\begin{itemize}
-\item No \textbf{cycle eulérien} (parité des liens incidents)
-\item Pas de \textbf{chaîne eulérienne} (continuité du tracé)
-\end{itemize}
-
-
-\end{frame}
-
-
-
-% FRAME
-\begin{frame}{Graphs}
-
-A graph is a set of \textit{vertices}) connected by \textbf{edges}.
-
-
-
-Examples:
-
-\begin{itemize} 
-  \item \textbf{Transportation networks  :} e.g. Subway: nodes are  stations,  edges are lines.
-  \item \textbf{Social networks:} individuals (nodes) , social interactions (edges)
-  \item \textbf{Scientific collaboration networks:} Co-autorship (edges) among researchers (nodes)
-  \item \ldots
-\end{itemize}
-
-\end{frame}
-
-
-
-
-% FRAME
-\begin{frame}{Types of graphs}
-
-\textbf{Undirected graph:}
-
-\begin{figure}
-  \includegraphics[width=12cm]{MatGraph3.pdf}
-\end{figure}
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}{Types of graphs}
-
-\textbf{Directed graph :}
-
-\textit{arcs} are employed instead of \textit{edges} who are "undirected".
-
-%TODO image EN
-\begin{figure}
-  \includegraphics[width=12cm]{MatGraph2.pdf}
-\end{figure}
-
-\end{frame}
-
-
-
-% FRAME
-\begin{frame}{Types of graphs}
-
-\textbf{Weighted directed graph:}
-
-%TODO image EN
-\begin{figure}
-  \includegraphics[width=12cm]{MatGraph1.pdf}
-\end{figure}
-
-Also :
-\begin{itemize}
-  \item Weighted undirected graphs
-  \item Multi-graph ()
-  \item Multi-partite graphs (several types of nodes )
-  \item Hypergraphs (links between more than 2 nodes)
-  \item \ldots
-\end{itemize}
-
-\end{frame}
-
-
-
-
-
-% FRAME
-\begin{frame}{Network analysis : measures}
-
-\textbf{Global measures:}
-
-\begin{itemize}
-\item number of nodes
-\item number of edges
-\item connected components
-\item Density (ratio nodes)
-\item Diameter : length of the longest shortest paths 
-\item Connectivity : number of edges and possible number of edges
-\end{itemize}
-
-~
-
-$\rightarrow$ \textbf{Nombre maximum d’arcs (sans boucle):}
-
-\begin{itemize}
-\item pour un graphe planaire: $3V - 6$
-\item pour un graphe non planaire non orienté: $\frac{V(V-1)}{2}$ 
-\item pour un graphe non planaire orienté: $V(V-1)$
-\end{itemize}
-
-\end{frame}
-
-% FRAME
-\begin{frame}{Principales mesures descriptives}
-
-\textbf{Mesures locales de centralité:}
-
-\begin{itemize}
-\item Degré: nombre d'arcs incidents (nbr. de voisins)
-\item Degré pondéré: nbr. d’arcs incidents pondérés
-\item Centralité de proximité (\textit{closeness}): inverse de la somme des distances à tous les autres noeuds
-\item Centralité d'intermédiarité (\textit{betweenness}): nombre de plus courts chemins passant par un noeud (standardisé)
-\end{itemize}
-
-
-\end{frame}
+\end{comment}
