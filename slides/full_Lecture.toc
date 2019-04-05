@@ -3,5 +3,3 @@
 \beamer@sectionintoc {2}{Simulation stochastique}{27}{0}{2}
 \beamer@sectionintoc {3}{Density}{38}{0}{3}
 \beamer@sectionintoc {4}{Interaction}{60}{0}{4}
-\beamer@sectionintoc {5}{Accessibility}{75}{0}{5}
-\beamer@sectionintoc {6}{Concentration, Segregation, Autocorrelation}{78}{0}{6}
