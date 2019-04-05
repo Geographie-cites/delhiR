@@ -41,9 +41,9 @@
 \end{frame}
 
 % FRAME
-\begin{frame}{Le centre de la concentration}
+\begin{frame}{A good starting point}
 
-\textbf{Où chercher de l'information sur les outils et les méthodes?}
+\textbf{Information about tools and methods }
 
 ~
 
@@ -53,8 +53,8 @@ GeoDa Center for Geospatial Analysis and Computation (Luc Anselin)
 
 ~
 
-$\rightarrow$ logiciels \emph{standalone} (GeoDa) + bibliothèques Python et R \\
-$\rightarrow$ tutoriels, bibliographie, cours en ligne
+$\rightarrow$ logiciels \emph{standalone} (GeoDa) + Python and  R libraries \\
+$\rightarrow$ tutorials, references, online courses
 
 
 \end{frame}
@@ -63,7 +63,7 @@ $\rightarrow$ tutoriels, bibliographie, cours en ligne
 % FRAME
 \begin{frame}{Concentration}
 
-\textbf{Méthodes classiques en économie des inégalités}
+\textbf{Classical methods from inequality economics}
 
 \begin{figure}
 \includegraphics[width=12cm]{Inequalities.jpg}
@@ -75,24 +75,27 @@ $\rightarrow$ tutoriels, bibliographie, cours en ligne
 % FRAME
 \begin{frame}{Concentration}
 
-\textbf{Indice de Hoover} \\
-\emph{(Indice de dissimilarité} ou \emph{Indice de Duncan)}
+\textbf{Hoover  index} \\
+\emph{(Dissimilarity index} or \emph{Duncan's I)}
 
 ~
 
-Demi somme des différences absolues entre deux stocks:
+For two classes $x$ and $y$ of a population  that sum up to 100\% (e.g. male / female), 
 
 \begin{equation}
 \nonumber
 H = \frac{1}{2} \sum_{i=1}^n \bigg| \frac{x_i}{x_{tot}} - \frac{y_i}{y_{tot}} \bigg|
 \end{equation}
 
+
+(also the longest vertical distance between the lorenz Curve and the 45 degrees line of perfect equality)
+
 \end{frame}
 
 
 % FRAME
 \begin{frame}{Concentration}
-
+%TODO figure EN
 \begin{figure}
 \includegraphics[width=9cm]{Gateau2.pdf}
 \end{figure}
@@ -104,23 +107,33 @@ H = \frac{1}{2} \sum_{i=1}^n \bigg| \frac{x_i}{x_{tot}} - \frac{y_i}{y_{tot}} \b
 % FRAME
 \begin{frame}{Concentration}
 
-\textbf{Indice de Gini}
+\textbf{Gini index}
 
 ~
 
-Moyenne relative des différences absolues entre toutes les paires d'unités pour un stock:
+relative mean of absolute differences between every pair of a stock 
 
 \begin{equation}
 \nonumber
 G = \frac{\sum_i \sum_j |x_i - x_j|}{2n \sum_i x_i}
 \end{equation}
 
-\end{frame}
+
+ranges from 0 (perfect equality) to 1 (perfect inequality), but these theoretical values are never reached.
+
+
+
+
+
+\end{frame}	
+
 
 
 % FRAME
 \begin{frame}{Concentration}
 
+
+%TODO figure EN 
 \begin{figure}
 \includegraphics[width=12cm]{Lorenz.pdf}
 \end{figure}
@@ -129,38 +142,40 @@ G = \frac{\sum_i \sum_j |x_i - x_j|}{2n \sum_i x_i}
 
 
 % FRAME
-\begin{frame}{Ségrégation}
+\begin{frame}{Segregation}
 
-\textbf{Mesures entropiques (théorie de l'information)}
+\textbf{Entropy-based measures}
+
+These meassures comes from the field of information theory (Shannon) ~
+
+\textbf{Quantity of information $I$ (in bits) of a message $m$ :} logarithm (base 2) of the ratio between the finite set of every possible message before a message is recieved ($M$, the universe) and  the finite set of possible message after it is recieved ($m$):
 
 ~
 
-\textbf{Quantité d'information:} logarithme (base 2) du quotient entre l'ensemble fini des évènements possibles avant information (N) et l'ensemble fini des évènements possibles après information (n):
-
 \begin{equation}
 \nonumber
-  I = \log\left(\frac{N}{n} \right) = - \log(p)
+  I = \log\left(\frac{M}{m} \right) = - \log(p(m))
 \end{equation}
 
 ~
 
-\textbf{Unité de cette quantité d'information:} le \textit{hartley}, le \textit{shannon} et surtout le \textit{bit} (\textit{binary digit})
+This quantity is expressed in \emph{bits} since the logarithm base is 2.
 
 \end{frame}
 
 
 % FRAME
-\begin{frame}{Ségrégation}
+\begin{frame}{Segregation}
 
-\textbf{Mesures entropiques (théorie de l'information)}
+\textbf{Entropy-based measures}
 
 ~ 
 
-La mesure \textbf{I}: apparition d'un évènement informatif. 
+\textbf{I}: Information brought by the occcurence of a message (informative event) . 
 
-La mesure \textbf{H} (entropie): information contenue dans un ensemble fini \\ 
-- i.e. quantité d'information moyenne contenue dans un ensemble \\ 
-- i.e. quantité d'information apportée par un évènement donné, multipliée par sa probabilité d'apparition
+\textbf{H} (entropy): information stored in a finite set of informative event (e.g. all the messages of a transmission) \\ 
+- i.e. average quantity of information stored in a set of messages \\ 
+- i.e. each message bring as much information as its quantity of information multiplied by its probability of apparition.
 
 \begin{equation}
   H(x) = - \sum\limits_{i=1}^n p_i \log(p_i)
@@ -169,7 +184,7 @@ La mesure \textbf{H} (entropie): information contenue dans un ensemble fini \\
 
 ~
 
-\textbf{Entropie relative:} rapport entre entropie observée et entropie maximale
+\textbf{Relative entropy:} ratio between an entropy and the maximum entropy $H_{max}$
 
 \begin{equation}
   H_{max} = \log(n)
@@ -179,100 +194,24 @@ La mesure \textbf{H} (entropie): information contenue dans un ensemble fini \\
 \end{frame}
 
 
-% FRAME
-\begin{frame}{Autocorrélation}
-
-Hoover, Gini, Shannon (Theil) ne distinguent pas ces trois configurations \\
-$\rightarrow$ ce sont des mesures presque aspatiales
-
-\begin{figure}
-\includegraphics[width=12cm]{NonSpatial.pdf}
-\end{figure}
-
-Les méthodes d'autocorrélation (\textbf{Geary} et \textbf{Moran}) distinguent 1 et 2.
-
-\end{frame}
-
 
 % FRAME
-\begin{frame}{Autocorrélation}
+\begin{frame}{Segregation}
 
-Indice \textbf{I} de Moran (1950):
+\textbf{Entropy interpretation guide}
 
-$$
-I = \frac{n}{\sum_{i} \sum_{j} w_{ij}} \times \frac{\sum_{i} \sum_{j} w_{ij} (x_i - \bar{x})(x_j - \bar{x})}{\sum_{i} (x_i - \bar{x})^2}
-$$
+~ 
+
+Low (relative) entropy values tend to indicate segregated configurations
 
 ~
 
-$n$ : nombre d'individus \\ 
-$x_i$ et $x_j$ : valeurs de la variable $x$ en $i$ et $j$ \\ 
-$\bar{x}$ : moyenne de la variable $x$ \\ 
-$w_{ij}$ : pondération correspondant à la définition du voisinage
+High (relative) entropy values tend to indicate more evenly distributed configurations
+
+
 
 \end{frame}
 
 
 
-% FRAME
-\begin{frame}{Autocorrélation}
-
-Le graphique de Moran et son indice:
-
-\begin{figure}
-\includegraphics[width=12cm]{MoranPlot.pdf}
-\end{figure}
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}{Autocorrélation}
-
-\textbf{Contributions locales à la mesure globale d'autocorrélation} \\
-LISA - \emph{local indicators of spatial autocorrelation}
-
-$$
-I_i = z_i \sum_{j} w_{ij} z_j
-$$
-
-~
-
-$z_i$ valeur standardisée pour l'unité spatiale $i$ \\
-$z_j$ valeur standardisée pour les unités voisines $j$ \\
-$w_{ij}$ pondération par la matrice de contiguïté ou de poids
-
-~
-
-$\rightarrow$ \textbf{Moran plot:} nuage entre $x$ et moyenne de $x$ dans le voisinage
-
-\end{frame}
-
-
-% FRAME
-\begin{frame}[fragile]{Application sur Paris}
-
-\textbf{Charger les données:}
-
-\begin{itemize}
-  \item \texttt{dataParis}: données socio-éco dans les Iris parisiens
-  \item \texttt{irisParis}: fond de carte correspondant (polygones)
-\end{itemize}
-
-~
-
-\textbf{Exercices:}
-
-\begin{itemize}
-  \item Calculer l'indice de Hoover entre Français et étrangers
-  \item Calculer l'indice de Gini sur les effectifs des différentes CSP
-  \item Calculer l'entropie relative sur les CSP pour chaque Iris et cartographier l'indicateur
-  \item Calculer l'autocorrélation entre cadres et ouvriers
-\end{itemize}
-
-~
-
-\textbf{Packages nécessaires:} \texttt{spdep} pour l'autocorrélation, éventuellement \texttt{ineq} pour Gini, rien pour Hoover.
-
-\end{frame}
 
