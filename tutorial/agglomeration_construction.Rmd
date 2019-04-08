@@ -1,0 +1,154 @@
+---
+title: "Agglomeration_delimitation"
+author: "PC & HC"
+date: "8 avril 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## Agglomeration construction 
+
+Most of the time, the definition of an agglomeration relies on the continuity of the built-up area, up to a certain threshold.
+In this short turotial, we show how to perform such a construction, starting from building geometries
+
+
+## Set up 
+
+We need some libraries : `sf` for spatial object handling, `dplyr` for handling tables and `smoothr`for a little polygon trick at the end ! 
+
+
+```{r lib_set }
+library(sf)
+library(dplyr)
+library(smoothr)
+```
+
+
+## Loading data
+
+
+The example file is a selection a some Delhi buildings in the `Delhi_Selection_buildings.shp` file. 
+Replace the  `setwd` argument with your own path to the tutorial material
+
+```{r loading_data, echo=FALSE, cache= TRUE}
+setwd("~/cours/DelhiR/delhiR/tutorial/")
+buildings <-  st_read("DATA/delhi_buildings/Delhi_Selection_buildings.shp")
+# we have a first glance at the buildings
+plot(buildings)
+```
+
+These are some Delhi buildings, restricted to a small area for computation speed sake.
+For this very tutorial, the legend and semiologic accuracy of the maps is not our concern.
+
+
+## Built-up area conitnuity.
+
+To capture every point at a certain distance of these buildings, we create a **buffer** of a given size (e.g. 200m) via the `st_buffer` function. 
+
+
+```{r buff, cache=TRUE}
+# size of buffer in meters
+buff_size <-  200
+# Construct a Buffer around buildings geometry with the given buffer size
+buff_buildings <-  st_buffer(buildings, dist = buff_size)
+plot(buff_buildings)
+```
+
+
+These geometries overlap so we have to merge them. This kind of "shape fusion" is achieved by a **geometric union*
+
+
+```{r union, cache=TRUE}
+union_buff_buildings <-  st_union(buff_buildings)
+plot(union_buff_buildings)
+```
+
+This is better ! 
+We have to check the format of this result with `class`
+```{r checkclass, echo=TRUE}
+class(union_buff_buildings)
+```
+
+this is a *multypolygon* (several polygons grouped, also connex components). 
+
+For conveniance, we will transform it into a table of several polygons components (each one being a closed geometry).
+We do that by a two step operation : 
+  - transform to a sf object ( `st_sf`  function , always do that when in doubt ^^), 
+  - then cast it as a POLYGON table. (`st_cast` function)
+
+We also attach a new `ID` attribute : a label giving the number of the compoent.
+
+
+```{r cast , cache=TRUE}
+components <- st_sf(union_buff_buildings)
+components <-  st_cast(components, "POLYGON")
+components$ID <-  1:nrow(components)
+plot(components)
+```
+
+
+## Taking the largest component
+
+We only focus on the largest component : we compute the area of each component with the `st_area` function. 
+
+```{r area , cache=TRUE}
+components$area <-  st_area(components)
+```
+
+To select the biggest component, there is a lot of alternatives, we present one using `dplyr` library `top_n` function , that retain the n top values of a table, given a column.
+
+```{r largest , cache=TRUE}
+largest_CC<- components %>% top_n(1, area)
+#plot gives two subplots because there is two attribute columns now
+plot(largest_CC)
+``` 
+
+
+## Removing holes and border grooves
+
+The final step is to take the convex hull of the component. This will fill the holes, and also flatten the borders of the geometry (cf. convexity definition). This is done with the `convex_hull` function.
+Here, we plot only the geometry by specifying `st_geometry` in the plot function argument, and set `reset` to false in  the first plot .
+The superposition of the second plot is achieved by the `add=TRUE` argument in the second plot
+
+```{r hull , cache=TRUE}
+agglo <-  st_convex_hull(largest_CC)
+plot(st_geometry(agglo), reset=FALSE, border="firebrick", lwd=2)
+#we add original buidlings for reference
+plot(buildings, add=TRUE, col="lightgray")
+```
+
+We're done ! 
+
+
+## Alternative 
+
+Convex hull produce "potato" shaped agglomeration (because of the convexity, there can be no grooves in the envelop). If we want more "complicated"" border lines we can simply the geometry and fill the holes. But we won't have an agglomeration anymore :-/ .
+
+
+
+```{r simplgeom}
+#try to adjust the tolerance to fit your needs
+simpleCC <-  st_simplify(largest_CC,dTolerance = 200, preserveTopology = F)
+plot(simpleCC)
+```
+
+Increase the `dTolerance` value for more drastic simplification of the geometry.
+
+
+
+
+Finally, to fill holes, we use the `smoothr` package, try some values of threshold until every holes is filled !
+
+
+```{r fillholes}
+#fill holes
+simpleCC_filled <- fill_holes(simpleCC, 10000000)
+plot(st_geometry(simpleCC_filled), col="firebrick", lwd=2, reset=FALSE)
+plot(buildings, col="lightgray", add=TRUE)
+```
+
+
