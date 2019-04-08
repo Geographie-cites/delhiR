@@ -1,8 +1,4 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
+
 # Project proposals
 
 ## 1. Segregation
@@ -10,7 +6,7 @@ output:
 - **Data:** census data (household, population) and the corresponding basemap
 - **Objects:** categories of population (scheduled castes or tribes, professional status, etc.)
 - **Methods:** similarity index, theil entropy, segregation index tournament, autocorrelation, implementation of Cortese's Z
-- **References:** Cortese el al., 1976, "Further considerations on the methodological analysis of segregation indices", American Sociological Review, vol.41, nº4, pp.630-637
+- **References:** Cortese el al., 1976, "Further considerations on the methodological analysis of segregation indices", *American Sociological Review*, vol.41, nº4, pp.630-637
 
 	
 ## 2. Amenities
@@ -18,6 +14,7 @@ output:
 - **Data:** census data (amenities) and the corresponding basemap and OSM data
 - **Objects:** multivariate and spatialized characterization of the set of amenities (hospital, school, water, etc.) at the household level and at the village level
 - **Methods:** multivariate geometrical analysis (PCA, hierarchical clustering), distance gradients, highlighting multiscale variation (regional vs. subregional effect)
+- **References:** Duncan (2012) "Space, race, and poverty: spatial inequalities in walkable neighborhood amenities?", *Demographic research* vol.26, pp.409-448
 
 
 
