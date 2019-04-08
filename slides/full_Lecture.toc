@@ -1,6 +1,6 @@
 \babel@toc {french}{}
 \beamer@sectionintoc {1}{Information g\IeC {\'e}ographique}{1}{0}{1}
-\beamer@sectionintoc {2}{Simulation stochastique}{27}{0}{2}
-\beamer@sectionintoc {3}{Density}{38}{0}{3}
-\beamer@sectionintoc {4}{Interaction}{60}{0}{4}
-\beamer@sectionintoc {5}{Concentration, Segregation, Autocorrelation}{75}{0}{5}
+\beamer@sectionintoc {2}{Simulation stochastique}{29}{0}{2}
+\beamer@sectionintoc {3}{Density}{40}{0}{3}
+\beamer@sectionintoc {4}{Interaction}{62}{0}{4}
+\beamer@sectionintoc {5}{Concentration, Segregation, Autocorrelation}{77}{0}{5}
