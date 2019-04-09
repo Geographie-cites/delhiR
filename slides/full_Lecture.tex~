@@ -1,0 +1,60 @@
+\documentclass{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amsmath}
+%\usepackage{mathabx}
+\usepackage[framemethod=tikz]{mdframed}
+
+%%% Package pour faire des tableaux à plusieurs lignes combinées
+\usepackage{multirow}
+
+\usepackage[french]{babel}
+\frenchsetup{StandardLists=true}
+
+%%% Package pour aligner les colonnes dans un tableau
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{verbatim}
+\usepackage{eurosym}
+
+\usetheme{simple}
+
+\author{H. Commenges & P.Chapron}
+\title{Spatial}
+\date{}
+
+
+\begin{document}
+
+
+\section{Information géographique}
+
+  \include{Infogeo}
+  
+  
+  
+\section{Simulation stochastique}
+
+  \include{Simulation}
+  
+\section{Density}
+
+ \include{Densite}
+
+\section{Interaction}
+
+\include{Interaction}  
+
+%\section{Accessibility}
+
+ %\include{Accessibilite}
+
+\section{Concentration, Segregation, Autocorrelation}
+  
+\include{Autocorrelation}
+
+\end{document}
