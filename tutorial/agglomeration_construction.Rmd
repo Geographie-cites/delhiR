@@ -32,9 +32,10 @@ library(smoothr)
 
 
 The example file is a selection a some Delhi buildings in the `Delhi_Selection_buildings.shp` file. 
-Replace the  `setwd` argument with your own path to the tutorial material
+Replace the  `setwd` argument with your own path to the tutorial material.
+For windows it should be something like `C:/Documents/.../Rstuff`.
 
-```{r loading_data, echo=FALSE, cache= TRUE}
+```{r loading_data, echo=TRUE, cache= TRUE}
 setwd("~/cours/DelhiR/delhiR/tutorial/")
 buildings <-  st_read("DATA/delhi_buildings/Delhi_Selection_buildings.shp")
 # we have a first glance at the buildings
