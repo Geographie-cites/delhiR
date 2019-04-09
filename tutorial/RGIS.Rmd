@@ -1,0 +1,118 @@
+---
+title: "R as a GIS - Basics"
+author: "Paul Chapron & Hadrien Commenges"
+date: "April 2019"
+output: 
+  html_document: 
+    highlight: kate
+    theme: simplex
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
+```
+
+
+## Outline
+
+- Loading a variety of types and formats of spatialized data
+- Performing basic GIS operations
+- Visualizing the results with plots and maps
+
+## Data description
+
+The dataset covers the Paris region.
+
+- Fine-grain administrative boundaries (polygons, ESRI shp)
+- Elevation data (raster, ASC)
+- Population grid with income data (polygons, Rds)
+- GPS tracks for my city walk (points, geoJSON)
+
+## Packages and data
+
+```{r}
+library(sf)
+library(raster)
+library(leaflet)
+library(tidyverse)
+```
+
+Load the Paris neighborhoods (Iris perimeters) and **dissolve to get one unified polygon**.
+
+```{r}
+parisNei <- st_read("DATA/Demo/parisnei.shp", crs = 2154, stringsAsFactors = FALSE)
+plot(parisNei$geometry)
+
+# option 1 (geometry union)
+parisUnion <- parisNei %>% st_union()
+plot(parisUnion)
+
+# option 2 (summarizing attributes and dissolving geometries)
+parisBound <- parisNei %>% 
+  group_by(DEP) %>% 
+  summarise(NBUNITS = n())
+plot(parisBound)
+```
+
+
+Load the raster of elevation and **declare the coordinate reference system** (CRS).
+
+```{r cars}
+rastElev <- raster(x = "DATA/Demo/BDALTI_75.asc")
+projection(rastElev) <- CRS("+init=epsg:2154")
+```
+
+Load the population grid and **convert to simple feature** format (`sf`).
+
+```{r}
+incomeGrid <- readRDS("DATA/Demo/carroyage.Rds") %>% 
+  st_as_sf() %>% 
+  st_set_crs(value = 2154)
+st_crs(incomeGrid)
+```
+
+Load the GPS data from my city walk and **transform the coordinates reference system**.
+
+```{r}
+myRoute <-   st_read("DATA/Demo/myroute.geojson")
+st_crs(myRoute)
+myRouteProj <- st_transform(myRoute, crs = 2154)
+```
+
+```{r}
+plot(parisNei$geometry, col = "grey", border = "white")
+plot(myRouteProj$geometry, pch = 4, cex = 0.1, col = "firebrick", add = TRUE)
+```
+
+
+## Objects to produce
+
+- **Object:** interactive map of the city walk with the Paris neighborhoods
+- **Operations to perform:**
+  1. Create a line from the collection o points [`st_linestring()`, `st_sf()`]
+  2. Re-project the Paris neighborhoods [`st_transform()`]
+  2. Map the neighborhoods and the line on OSM tiles [`leaflet()`, `addTiles()`, `addPolygons()`, `addPolylines()`]
+
+- **Object:** static map of the city walk with the income grid (median income as choropleth)
+- **Operations to perform:**
+  1. Create a line from the collection o points [`st_linestring()`, `st_sf()`]
+  2. Cut or mask the population grid with a relevant bounding polygon or bounding box [`st_bbox()`, `st_intersects()` or `st_contains()` or `st_crop()`]
+  3. Create a choropleth layer with the median income for each cell of the grid with the `cartography` package [`choroLayer()`]
+  4. Add the spatial line representing the city walk [`plot()`]
+
+- **Object:** Elevation profile for my city walk
+- **Operations to perform:**
+  1. extract elevation values from the raster for each GPS point [`raster::extract()`, !warning! `tidyr::extract()`]
+  2. compute pairwise distances between successive points [`st_distance()`]
+  3. plot the result: elevation (Y) vs. distance (X)
+
+- **Object:** Income profile for my city walk
+- **Operations to perform:**
+  1. extract income values from the grid for each GPS point [`st_intersects()`]
+  2. compute pairwise distances between successive points [`st_distance()`]
+  3. plot the result: elevation (Y) vs. distance (X) [`plot()` or `ggplot()`]
+
+
+
